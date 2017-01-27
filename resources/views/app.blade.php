@@ -147,52 +147,52 @@
                     <i class="material-icons">menu</i>
                  </a>
                 <ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
-        <li>
-            <div class="userView z-depth-1">
-                <img class="background image-size" src="https://static.pexels.com/photos/6604/public-transportation-tram-bus-seats.jpeg">
-                <div class="transbox hoverable home-layout ">
-                    <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="http://localhost/busproject/public/dashboard">
-                        <span class="home-font-size white-text truncate " >
-                            รถประจำทางภูเก็ต
+                    <li>
+                        <div class="userView z-depth-1">
+                            <img class="background image-size" src="https://www.mx7.com/i/c45/6RtCp6.jpg" >
+                            <div class="transbox hoverable home-layout ">
+                                <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="http://localhost/busproject/public/dashboard">
+                                    <span class="home-font-size white-text truncate " >
+                                        รถประจำทางภูเก็ต
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="#00695c teal darken-3 z-depth-1 border row ">
+                        <span class="white-text title-menu col s5 offset-s5">
+                            เมนู
                         </span>
-                    </a>
-                </div>
-            </div>
-        </li>
-        <li class="#00695c teal darken-3 z-depth-1 border row ">
-            <span class="white-text title-menu col s5 offset-s5">
-                เมนู
-            </span>
-        </li>
-        <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-            <li>
-                <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถโพถ้อง</a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
-                        <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                    </li>
+                    <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                        <li>
+                            <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถโพถ้อง</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
+                                    <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถสองแถว</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถสองแถว</a></li>
+                                    <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                </ul>
+                            </div>                
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect truncate"><i class="material-icons">info</i>รถแอร์พอร์ทบัส</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
+                                    <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                </ul>
+                            </div>
+                        </li> 
                     </ul>
-                </div>
-            </li>
-            <li>
-                <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถสองแถว</a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถสองแถว</a></li>
-                        <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
-                    </ul>
-                </div>                
-            </li>
-            <li>
-                <a class="collapsible-header waves-effect truncate"><i class="material-icons">info</i>รถแอร์พอร์ทบัส</a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
-                        <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
-                    </ul>
-                </div>
-            </li> 
-        </ul>
                 </ul>
             </div>
         </nav>
