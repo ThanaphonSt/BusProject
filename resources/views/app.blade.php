@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Laravel</title>
+    <title>busproject</title>
 
      <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
@@ -146,7 +146,7 @@
             <div class="userView z-depth-1">
                 <img class="background image-size" src="https://moschaam2013.files.wordpress.com/2013/12/e0b8a3e0b896e0b89be0b8a3e0b8b0e0b888e0b8b3e0b897e0b8b2e0b887.jpg">
                 <div class="transbox hoverable home-layout ">
-                    <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="http://localhost/laravel/public/dashboard">
+                    <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="http://localhost/busproject/public/dashboard">
                         <span class="home-font-size black-text truncate " >
                             รถประจำทางภูเก็ต
                         </span>
@@ -164,9 +164,8 @@
                 <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถโพถ้อง</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="http://localhost/laravel/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
-                        <li><a href="http://localhost/laravel/public/busstop" class="waves-effect truncate">ป้ายรถโพถ้อง</a></li>
-                        <li><a href="http://localhost/laravel/public/busfare" class="waves-effect truncate">ค่าโดยสารรถโพถ้อง</a></li>
+                        <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
+                        <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                     </ul>
                 </div>
             </li>
@@ -174,7 +173,8 @@
                 <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถสองแถว</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="http://localhost/laravel/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถสองแถว</a></li>
+                        <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถสองแถว</a></li>
+                        <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                     </ul>
                 </div>                
             </li>
@@ -182,7 +182,8 @@
                 <a class="collapsible-header waves-effect truncate"><i class="material-icons">info</i>รถแอร์พอร์ทบัส</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="http://localhost/laravel/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
+                        <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
+                        <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                     </ul>
                 </div>
             </li>
