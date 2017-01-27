@@ -141,7 +141,12 @@
     </style>
 </head>
 <body id="app-layout">
-    <ul id="slide-out" class="side-nav fixed">
+        <nav class="top-nav panel #00695c teal darken-3">
+            <div class="container">
+                <a href="" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+                    <i class="material-icons">menu</i>
+                 </a>
+                <ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
         <li>
             <div class="userView z-depth-1">
                 <img class="background image-size" src="https://moschaam2013.files.wordpress.com/2013/12/e0b8a3e0b896e0b89be0b8a3e0b8b0e0b888e0b8b3e0b897e0b8b2e0b887.jpg">
@@ -186,18 +191,11 @@
                         <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                     </ul>
                 </div>
-            </li>
+            </li> 
         </ul>
-    </ul>
-    
-    <nav class="middle-nav panel #00695c teal darken-3">
-        <div class="left hide-on-med-and-down">
-            <div  id="app-navbar-collapse">
-                <ul class="nav navbar-nav">
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <main>
     @yield('content')
