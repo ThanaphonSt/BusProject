@@ -149,10 +149,10 @@
                 <ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
         <li>
             <div class="userView z-depth-1">
-                <img class="background image-size" src="https://moschaam2013.files.wordpress.com/2013/12/e0b8a3e0b896e0b89be0b8a3e0b8b0e0b888e0b8b3e0b897e0b8b2e0b887.jpg">
+                <img class="background image-size" src="https://static.pexels.com/photos/6604/public-transportation-tram-bus-seats.jpeg">
                 <div class="transbox hoverable home-layout ">
                     <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="http://localhost/busproject/public/dashboard">
-                        <span class="home-font-size black-text truncate " >
+                        <span class="home-font-size white-text truncate " >
                             รถประจำทางภูเก็ต
                         </span>
                     </a>
