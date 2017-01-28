@@ -31,6 +31,11 @@ class BusController extends Controller {
 	{
 		return view('busfare');
 	}
+
+	public function map()
+	{
+		return view('map');
+	}
 	/**
 	 * Show the form for creating a new resource.
 	 *
