@@ -42,7 +42,7 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: {lat: 7.883135, lng: 98.387156},
-          mapTypeId: 'terrain'
+          mapTypeId: 'roadmap'
         });
 
         var busNumber1 = [
