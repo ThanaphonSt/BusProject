@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>PHO TONG in Phuket</title>
+      <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+ 
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 80%;
+        width: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -16,10 +20,18 @@
         margin: 0;
         padding: 0;
       }
+      
     </style>
   </head>
   <body>
     <div id="map"></div>
+    <br>
+    <ul id="dropdown2" class="dropdown-content">
+    <li><a href="#!">สาย 1</a></li>
+    <li><a href="#!">สาย 2</a></li>
+    <li><a href="#!">สาย 3</a></li>
+  </ul>
+  <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right"></i></a>
     <script>
 
       // This example creates a 2-pixel-wide red polyline showing the path of William
@@ -28,7 +40,7 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
+          zoom: 15,
           center: {lat: 7.883135, lng: 98.387156},
           mapTypeId: 'terrain'
         });
@@ -960,5 +972,11 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
     </script>
+
+      <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   </body>
 </html>
