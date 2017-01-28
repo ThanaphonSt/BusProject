@@ -169,8 +169,8 @@
                             <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถโพถ้อง</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
-                                    <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                    <li><a href="http://localhost/busproject/public/routeofpotong" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
+                                    <li><a href="http://localhost/busproject/public/potongstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                                     <li><a href="http://localhost/busproject/public/map" class="waves-effect truncate">TEST MAP</a></li>
                                 </ul>
                             </div>
@@ -179,8 +179,8 @@
                             <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถสองแถว</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถสองแถว</a></li>
-                                    <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                    <li><a href="http://localhost/busproject/public/routeofsongteaw" class="waves-effect truncate">เส้นทางเดินรถสองแถว</a></li>
+                                    <li><a href="http://localhost/busproject/public/songteawstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                                 </ul>
                             </div>                
                         </li>
@@ -188,8 +188,8 @@
                             <a class="collapsible-header waves-effect truncate"><i class="material-icons">info</i>รถแอร์พอร์ทบัส</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
-                                    <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                    <li><a href="http://localhost/busproject/public/routeofairportbus" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
+                                    <li><a href="http://localhost/busproject/public/airportstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                                 </ul>
                             </div>
                         </li> 

@@ -22,9 +22,11 @@ Route::controllers([
 );
 
 Route::get('/oei', 'HomeController@test');
-
 Route::get('/dashboard', 'BusController@index');
-Route::get('/busdetail', 'BusController@showBusDetail');
-Route::get('/busstop', 'BusController@busStop');
-Route::get('/busfare', 'BusController@busFare');
+Route::get('/routeofpotong', 'BusController@potongRouteDetail');
+Route::get('/routeofsongteaw', 'BusController@songteawRouteDetail');
+Route::get('/routeofairportbus', 'BusController@airportBusRouteDetail');
+Route::get('/potongstop', 'BusController@potongStop');
+Route::get('/songteawstop', 'BusController@songteawStop');
+Route::get('/airportstop', 'BusController@airportStop');
 Route::get('/map', 'BusController@map');
