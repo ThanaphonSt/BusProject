@@ -171,6 +171,7 @@
                                 <ul>
                                     <li><a href="http://localhost/busproject/public/busdetail" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
                                     <li><a href="http://localhost/busproject/public/busstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                    <li><a href="http://localhost/busproject/public/map" class="waves-effect truncate">TEST MAP</a></li>
                                 </ul>
                             </div>
                         </li>
