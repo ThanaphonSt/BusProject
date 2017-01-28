@@ -27,3 +27,4 @@ Route::get('/dashboard', 'BusController@index');
 Route::get('/busdetail', 'BusController@showBusDetail');
 Route::get('/busstop', 'BusController@busStop');
 Route::get('/busfare', 'BusController@busFare');
+Route::get('/map', 'BusController@map');
