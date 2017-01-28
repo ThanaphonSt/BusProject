@@ -7,50 +7,49 @@ use Illuminate\Http\Request;
 
 class BusController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
 		return view('dashboard');
 	}
 
-	public function showBusDetail()
+	public function potongRouteDetail()
 	{
-		return view('busdetail');
+		return view('potongroute');
 	}	
 
-	public function busStop()
+	public function songteawRouteDetail()
 	{
-		return view('busstop');
+		return view('songteawroute');
+	}	
+
+	public function airportBusRouteDetail()
+	{
+		return view('airportbusroute');
+	}	
+
+	public function potongStop()
+	{
+		return view('potongstop');
 	}
 
-	public function busFare()
+	public function songteawStop()
 	{
-		return view('busfare');
+		return view('songteawstop');
+	}
+
+	public function airportStop()
+	{
+		return view('airportstop');
 	}
 
 	public function map()
 	{
 		return view('map');
 	}
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
+
 	public function show($id)
 	{
-		//
+		
 	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	*/
 
 }
