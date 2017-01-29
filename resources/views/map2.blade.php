@@ -50,10 +50,100 @@
       // Brisbane, Australia.
 
       function initMap2() {
+        var point1 = {lat: 7.921122, lng: 98.395734};
+        var point2 = {lat: 7.927096, lng: 98.395491};
+        var point3 = {lat: 7.913441, lng: 98.393301};
+        var point4 = {lat: 7.907697, lng: 98.391021};
+        var point5 = {lat: 7.899765, lng: 98.388914};
+        var point6 = {lat: 7.891908, lng: 98.389219};
+        var point7 = {lat: 7.889516, lng: 98.386817};
+        var point8 = {lat: 7.890907, lng: 98.391171};
+        var point9 = {lat: 7.890054, lng: 98.397753};
+        var point10 = {lat: 7.883343, lng: 98.393613};
+        var point11 = {lat: 7.880042, lng: 98.395478};
+        var point12 = {lat: 7.877530, lng: 98.395420};
+        var point13 = {lat: 7.878866, lng: 98.385421};
+        var point14 = {lat: 7.880441, lng: 98.378365};
+        var point15 = {lat: 7.880916, lng: 98.368737};
+        var point16 = {lat: 7.870214, lng: 98.359144};
+        var point17 = {lat: 7.861417, lng: 98.353152};
+        var point18 = {lat: 7.857987, lng: 98.362925};  
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 17,
           center: {lat: 7.8784483, lng: 98.3983324},
           mapTypeId: 'roadmap'
+        });
+        var marker = new google.maps.Marker({
+          position: point1,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point2,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point3,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point4,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point5,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point6,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point7,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point8,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point9,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point10,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point11,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point12,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point13,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point14,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point15,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point16,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point17,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point18,
+          map: map
         });
 
         var busNumber1 = [
