@@ -38,7 +38,7 @@
       // Kingsford Smith's first trans-Pacific flight between Oakland, CA, and
       // Brisbane, Australia.
 
-      function initMap() {
+      function initMap2() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: {lat: 7.883135, lng: 98.387156},
@@ -970,7 +970,7 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap2">
     </script>
 
       <!--Import jQuery before materialize.js-->
