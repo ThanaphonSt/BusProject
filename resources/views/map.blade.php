@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>PHO TONG in Phuket</title>
-      <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+@extends('app')
+<title>PHO TONG in Phuket</title>
  
-    <style>
+      <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
@@ -22,32 +16,26 @@
       }
       
     </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <br>
-    <div class="row">
-    <ul id="dropdown2" class="dropdown-content">
-    <li><a href="map1">สาย 1</a></li>
-    <li><a href="map2">สาย 2</a></li>
-    <li><a href="map3">สาย 3</a></li>
-    <li><a href="map">ดูทุกสาย</a></li>
-  </ul>
-  <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right"></i></a>
-  <br>
-  <h5>กรุณาเลือกเส้นทางที่ต้องการ</h5>
-  <div class="col s1 offset-s11">
-  <a class="waves-effect waves-light btn" href="dashboard">กลับหน้าแรก</a>
-  </div>
-  <br>
-  </div>
-    <script>
+@section('content')
+      <div id="map"></div>
+      <div>
+            <br>
+            <ul id="dropdown2" class="dropdown-content">
+                <li><a href="http://localhost/busproject/public/map1">สาย 1</a></li>
+                <li><a href="http://localhost/busproject/public/map2">สาย 2</a></li>
+                <li><a href="http://localhost/busproject/public/map">สาย 3</a></li>
+            </ul>
 
-      // This example creates a 2-pixel-wide red polyline showing the path of William
-      // Kingsford Smith's first trans-Pacific flight between Oakland, CA, and
-      // Brisbane, Australia.
+            <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right"></i></a>
+      </div>
+          
+      
+      <script type="text/javascript">
+            $('.dropdown-button').dropdown('open');
+      </script>
+      <script>
 
-      function initMap2() {
+      function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: {lat: 7.883135, lng: 98.387156},
@@ -978,19 +966,9 @@
         busPath3.setMap(map);
       }
     </script>
+    
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap2">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
     </script>
 
-      <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script type="text/javascript">
-  	$(document).ready(function() {
-    	Materialize.updateTextFields();
-  	});
-  </script>
-  </body>
-</html>
+  @endsection
