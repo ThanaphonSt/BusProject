@@ -26,6 +26,7 @@
   <body>
     <div id="map"></div>
     <br>
+    <div class="row">
     <ul id="dropdown2" class="dropdown-content">
     <li><a href="map1">สาย 1</a></li>
     <li><a href="map2">สาย 2</a></li>
@@ -34,12 +35,11 @@
   </ul>
   <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right"></i></a>
   <br>
-  <select>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
+  <h5><p><dd>รถโพท้อง สายที่ 2</h5>
+  <div class="col s1 offset-s11">
+  <a class="waves-effect waves-light btn" href="dashboard">กลับหน้าแรก</a>
+  </div>
+  </div>
     <script>
 
       // This example creates a 2-pixel-wide red polyline showing the path of William
