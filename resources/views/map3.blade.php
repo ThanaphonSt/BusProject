@@ -48,7 +48,7 @@
 
       function initMap2() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
+          zoom: 17,
           center: {lat: 7.883135, lng: 98.387156},
           mapTypeId: 'roadmap'
         });
@@ -968,12 +968,12 @@
           path: busNumber3,
           geodesic: true,
           strokeColor: '#0000FF',
-          strokeOpacity: 1.0,
-          strokeWeight: 2
+          strokeOpacity: 5.0,
+          strokeWeight: 5
         });
 
-        busPath1.setMap(map);
-        busPath2.setMap(map);
+        // busPath1.setMap(map);
+        // busPath2.setMap(map);
         busPath3.setMap(map);
       }
     </script>

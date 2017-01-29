@@ -48,7 +48,7 @@
 
       function initMap2() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
+          zoom: 17,
           center: {lat: 7.883135, lng: 98.387156},
           mapTypeId: 'roadmap'
         });
@@ -960,8 +960,8 @@
           path: busNumber2,
           geodesic: true,
           strokeColor: '#11BB00',
-          strokeOpacity: 1.0,
-          strokeWeight: 2
+          strokeOpacity: 5.0,
+          strokeWeight: 5
         });
 
         var busPath3 = new google.maps.Polyline({
@@ -972,9 +972,9 @@
           strokeWeight: 2
         });
 
-        busPath1.setMap(map);
+        // busPath1.setMap(map);
         busPath2.setMap(map);
-        busPath3.setMap(map);
+        // busPath3.setMap(map);
       }
     </script>
     <script async defer

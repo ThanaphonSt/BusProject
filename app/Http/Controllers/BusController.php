@@ -47,6 +47,21 @@ class BusController extends Controller {
 		return view('map');
 	}
 
+	public function map1()
+	{
+		return view('map1');
+	}
+
+	public function map2()
+	{
+		return view('map2');
+	}
+
+	public function map3()
+	{
+		return view('map3');
+	}
+
 	public function show($id)
 	{
 		
