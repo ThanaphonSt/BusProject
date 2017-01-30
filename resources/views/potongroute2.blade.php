@@ -1,6 +1,6 @@
 @extends('app')
 @section('brand')
-เส้นทางเดินรถโพถ้อง
+เส้นทางเดินรถโพถ้องสายที่ 2
 @endsection
     <title>PHO TONG in Phuket</title>
     <style>
