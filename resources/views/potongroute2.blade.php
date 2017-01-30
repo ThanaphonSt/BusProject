@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
+@extends('app')
     <title>PHO TONG in Phuket</title>
-      <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
- 
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -22,24 +15,26 @@
       }
       
     </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <br>
-    <div class="row">
-    <ul id="dropdown2" class="dropdown-content">
-    <li><a href="map1">สาย 1</a></li>
-    <li><a href="map2">สาย 2</a></li>
-    <li><a href="map3">สาย 3</a></li>
-    <li><a href="map">ดูทุกสาย</a></li>
-  </ul>
-  <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right"></i></a>
+@section('content')  
+        <div id="map"></div>
+            <div>
+                <ul id="dropdown2" class="dropdown-content">
+                <li><a href="http://localhost/busproject/public/routeofpotong1">สาย 1</a></li>
+                <li><a href="http://localhost/busproject/public/routeofpotong2">สาย 2</a></li>
+                <li><a href="http://localhost/busproject/public/routeofpotong3">สาย 3</a></li>
+                <li><a href="http://localhost/busproject/public/routeofpotong">ดูทุกสาย</a></li>
+                </ul>
+                <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right"></i></a>
+            </div>
+        <script type="text/javascript">
+            $('.dropdown-button').dropdown('open');
+        </script>
   <br>
-  <h5><p><dd>รถโพท้อง สายที่ 3</h5>
-  <div class="col s1 offset-s11">
-  <a class="waves-effect waves-light btn" href="dashboard">กลับหน้าแรก</a>
-  </div>
-  </div>
+  <h5><p><dd>รถโพท้อง สายที่ 2</h5>
+  <p>ชื่อเส้นทาง : สถาบันราชภัฎภูเก็ต - สถานีอนามัยแหลมชั่น
+  <br><u>เที่ยวไป</u> : เริ่มต้นจากสถานที่จอดรถโดยสารประจำทาง บริเวณห้างซุปเปอร์ชิป ไปตามถนน เทพกระษัตรี ผ่านมหาวิทยาลัยราชภัฎภูเก็ต ผ่านโรงเรียนภูเก็ตเทคโนโลยี โรงเรียนภูเก็ต วิทยาลัย แยกซ้ายไปตามถนนดำรง ผ่านโรงเรียนสตรีภูเก็ต เรือนจำจังหวัดภูเก็ต แยกขวา ไปตามถนนสุรินทร์ ผ่านศาลากลางจังหวัดภูเก็ตสำนักงานเทศบาล แยกขวาไปตามถนน พังงา แยกขวาเข้าสถานีขนส่งผู้โดยสารจังหวัดภูเก็ต แล้วไปตามถนนดิลกอุทิศ 2 แยกขวา ไปตามถนนอ๋องซิมผ่าย ผ่านตลาดเกษตร ตรงไปตามถนนกระ ถนนพูนผล ผ่านโรงเรียน เทศบาลเมือง แยกซ้ายไปตามถนนบางกอก แยกซ้ายไปตามถนนเจ้าฟ้า ผ่านสวนหลวง ร. 9 ถึงทางแยกท่าแครง แยกซ้ายไปตามถนนศักดิเดช แยกขวาไปตามถนนพัฒนาท้องถิ่น ผ่านสถานีอนามัยแหลมชั่น ถึงทางแยก เลี้ยวซ้ายไปตามถนเจ้าฟ้าตะวันออก ไปสุด เส้นทาง ณ สถานที่จอดรถโดยสารประจำทางบริเวณตลาดใหม่มุมเมือง ระยะทางตลอด สาย ยาว 14 กม.
+  <br><u>เที่ยวกลับ</u> : เริ่มจากตลาดใหม่มุมเมือง ย้อนเส้นทางเที่ยวไป จนสุดสายที่บริเวณห้างซุปเปอร์ชิป
+
     <script>
 
       // This example creates a 2-pixel-wide red polyline showing the path of William
@@ -47,21 +42,27 @@
       // Brisbane, Australia.
 
       function initMap2() {
-        var point1 = {lat: 7.866532, lng: 98.392749};
-        var point2 = {lat: 7.870661, lng: 98.390715};
-        var point3 = {lat: 7.879085, lng: 98.385419};
-        var point4 = {lat: 7.883138, lng: 98.387520};
-        var point5 = {lat: 7.887053, lng: 98.387697};
-        var point6 = {lat: 7.890897, lng: 98.391148};
-        var point7 = {lat: 7.885744, lng: 98.393161};
-        var point8 = {lat: 7.883350, lng: 98.393670};
-        var point9 = {lat: 7.882823, lng: 98.399380};
-        var point10 = {lat: 7.885237, lng: 98.411373};
-        var point11 = {lat: 7.884131, lng: 98.426926};
-        var point12 = {lat: 7.870947, lng: 98.432618};
+        var point1 = {lat: 7.921122, lng: 98.395734};
+        var point2 = {lat: 7.927096, lng: 98.395491};
+        var point3 = {lat: 7.913441, lng: 98.393301};
+        var point4 = {lat: 7.907697, lng: 98.391021};
+        var point5 = {lat: 7.899765, lng: 98.388914};
+        var point6 = {lat: 7.891908, lng: 98.389219};
+        var point7 = {lat: 7.889516, lng: 98.386817};
+        var point8 = {lat: 7.890907, lng: 98.391171};
+        var point9 = {lat: 7.890054, lng: 98.397753};
+        var point10 = {lat: 7.883343, lng: 98.393613};
+        var point11 = {lat: 7.880042, lng: 98.395478};
+        var point12 = {lat: 7.877530, lng: 98.395420};
+        var point13 = {lat: 7.878866, lng: 98.385421};
+        var point14 = {lat: 7.880441, lng: 98.378365};
+        var point15 = {lat: 7.880916, lng: 98.368737};
+        var point16 = {lat: 7.870214, lng: 98.359144};
+        var point17 = {lat: 7.861417, lng: 98.353152};
+        var point18 = {lat: 7.857987, lng: 98.362925};  
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 17,
-          center: {lat: 7.883135, lng: 98.387156},
+          center: {lat: 7.8784483, lng: 98.3983324},
           mapTypeId: 'roadmap'
         });
         var marker = new google.maps.Marker({
@@ -110,6 +111,30 @@
         });
         var marker = new google.maps.Marker({
           position: point12,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point13,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point14,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point15,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point16,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point17,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: point18,
           map: map
         });
 
@@ -1020,31 +1045,24 @@
           path: busNumber2,
           geodesic: true,
           strokeColor: '#11BB00',
-          strokeOpacity: 1.0,
-          strokeWeight: 2
+          strokeOpacity: 5.0,
+          strokeWeight: 5
         });
 
         var busPath3 = new google.maps.Polyline({
           path: busNumber3,
           geodesic: true,
           strokeColor: '#0000FF',
-          strokeOpacity: 5.0,
-          strokeWeight: 5
+          strokeOpacity: 1.0,
+          strokeWeight: 2
         });
 
         // busPath1.setMap(map);
-        // busPath2.setMap(map);
-        busPath3.setMap(map);
+        busPath2.setMap(map);
+        // busPath3.setMap(map);
       }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap2">
     </script>
-
-      <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  </body>
-</html>
+@endsection

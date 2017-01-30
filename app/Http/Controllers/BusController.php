@@ -49,17 +49,17 @@ class BusController extends Controller {
 
 	public function map1()
 	{
-		return view('map1');
+		return view('potongroute1');
 	}
 
 	public function map2()
 	{
-		return view('map2');
+		return view('potongroute2');
 	}
 
 	public function map3()
 	{
-		return view('map3');
+		return view('potongroute3');
 	}
 
 	public function show($id)
