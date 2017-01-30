@@ -1,4 +1,7 @@
 @extends('app')
+@section('brand')
+เส้นทางเดินรถโพถ้อง
+@endsection
     <title>PHO TONG in Phuket</title>
       <!-- Compiled and minified CSS -->
     <style>

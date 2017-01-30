@@ -1,4 +1,7 @@
 @extends('app')
+@section('brand')
+เส้นทางเดินรถโพถ้อง
+@endsection
     <title>PHO TONG in Phuket</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
