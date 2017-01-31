@@ -18,21 +18,20 @@
         height: 100% !important;
     }
 </style>
-<div>
+<div class="teal darken-4">
     <ul id="dropdown2" class="dropdown-content">
         <li><a href="http://localhost/busproject/public/potongstopshopping">ห้างสรรพสินค้า</a></li>
         <li><a href="http://localhost/busproject/public/potongstoprestaurant">ร้านอาหาร</a></li>
         <li><a href="http://localhost/busproject/public/potongstophotel">โรงแรม</a></li>
     </ul>
-	<a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
-	</nav>
+    <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
 </div>
  	<div class ="google-maps">
 		<iframe
   			width="650"
   			height="450"
   			frameborder="0" style="border:0"
-  			src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBYoKx2-ce6XMQDsCET7TD8RJiKVgTK-_0&q=shopping+in+Phuket" allowfullscreen>
+  			src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBYoKx2-ce6XMQDsCET7TD8RJiKVgTK-_0&q=Prince+of+Songkla+university+in+Phuket" allowfullscreen>
 		</iframe>
 	</div>
 

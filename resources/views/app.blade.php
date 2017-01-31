@@ -145,7 +145,7 @@
     </style>
 </head>
 <body id="app-layout">
-        <nav class="top-nav panel #00695c teal darken-3">
+        <nav class="top-nav panel teal darken-3">
             <div class="container">
                 <a href="" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
                     <i class="material-icons">menu</i>
@@ -166,10 +166,13 @@
                             </div>
                         </div>
                     </li>
-                    <li class="#00695c teal darken-3 z-depth-1 border row ">
+                    <li class="teal darken-3 z-depth-1 border">
+                    <div class="row">
                         <span class="white-text title-menu col s5 offset-s5">
                             เมนู
                         </span>
+                    </div>
+                        
                     </li>
                     <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
                         <li>
