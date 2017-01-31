@@ -19,7 +19,6 @@
       
     </style>
 @section('content')  
-        <div id="map"></div>
             <div>
                 <ul id="dropdown2" class="dropdown-content">
                 <li><a href="http://localhost/busproject/public/routeofpotong1">สาย 1</a></li>
@@ -29,6 +28,7 @@
                 </ul>
                 <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right"></i></a>
             </div>
+        <div id="map"></div>
         <script type="text/javascript">
             $('.dropdown-button').dropdown('open');
         </script>

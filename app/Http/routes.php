@@ -33,3 +33,6 @@ Route::get('/map', 'BusController@map');
 Route::get('/routeofpotong1', 'BusController@map1');
 Route::get('/routeofpotong2', 'BusController@map2');
 Route::get('/routeofpotong3', 'BusController@map3');
+Route::get('/potongstopshopping', 'BusController@potongShopping');
+Route::get('/potongstophotel', 'BusController@potongHotel');
+Route::get('/potongstoprestaurant', 'BusController@potongRestaurant');

@@ -62,14 +62,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
     </script>
-
-    <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">one<span class="badge">1</span></a></li>
-    <li><a href="#!">two<span class="new badge">1</span></a></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-  <a class="btn dropdown-button" href="#!" data-activates="dropdown2">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a>
-
   <script type="text/javascript">
   	$(document).ready(function() {
     	Materialize.updateTextFields();

@@ -62,9 +62,23 @@ class BusController extends Controller {
 		return view('potongroute3');
 	}
 
+	public function potongShopping()
+	{
+		return view('potongstopshop');
+	}
+
+	public function potongHotel()
+	{
+		return view('potongstophotel');
+	}	
+
+	public function potongRestaurant()
+	{
+		return view('potongstoprestaurant');
+	}
+
 	public function show($id)
 	{
 		
 	}
-
 }
