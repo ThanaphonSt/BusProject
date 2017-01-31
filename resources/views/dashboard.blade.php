@@ -1,38 +1,22 @@
 @extends('app')
+
 @section('brand')
 ที่อยู่ปัจจุบัน
 @endsection
-@section('content')
-<style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-     #map {
+
+    <style>
+      #map {
         height: 100%;
       }
-      /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
-    .google-maps {
-        position: relative;
-        padding-bottom: 75%; // This is the aspect ratio
-        height: 0;
-        overflow: hidden;
-    }
-    .google-maps iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-    }      
     </style>
-  </head>
-  <body>
+@section('content')
     <div id="map"></div>
-    
+
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -69,7 +53,6 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYoKx2-ce6XMQDsCET7TD8RJiKVgTK-_0&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
     </script>
-  </body>
 @endsection	
