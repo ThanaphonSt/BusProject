@@ -158,7 +158,7 @@
                         <div class="userView z-depth-1">
                             <img class="background image-size" src="https://www.mx7.com/i/c45/6RtCp6.jpg" >
                             <div class="transbox hoverable home-layout ">
-                                <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="http://localhost/busproject/public/dashboard">
+                                <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="http://localhost/busproject/public/current">
                                     <span class="home-font-size white-text truncate " >
                                         รถประจำทางภูเก็ต
                                     </span>

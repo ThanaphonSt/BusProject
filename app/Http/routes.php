@@ -22,7 +22,7 @@ Route::controllers([
 );
 
 Route::get('/oei', 'HomeController@test');
-Route::get('/dashboard', 'BusController@index');
+Route::get('/current', 'BusController@index');
 Route::get('/routeofpotong', 'BusController@potongRouteDetail');
 Route::get('/routeofsongteaw', 'BusController@songteawRouteDetail');
 Route::get('/routeofairportbus', 'BusController@airportBusRouteDetail');
