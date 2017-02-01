@@ -1,6 +1,6 @@
 @extends('app')
 @section('brand')
-สถานที่ท่องเที่ยวและร้านอาหาร
+ร้านอาหาร
 @endsection
 @section('content')
 <style>
