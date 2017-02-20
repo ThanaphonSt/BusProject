@@ -77,6 +77,11 @@ class BusController extends Controller {
 		return view('potongstoprestaurant');
 	}
 
+	public function currentbus()
+	{
+		return view('carpotongroute');
+	}
+
 	public function show($id)
 	{
 		
