@@ -1,6 +1,6 @@
 @extends('app')
 @section('brand')
-เส้นทางเดินรถโพถ้อง
+ตำแหน่งรถปัจจุบัน
 @endsection
     <title>PHO TONG in Phuket</title>
  
@@ -35,13 +35,11 @@
 @section('content')
       <div class="teal darken-4">
             <ul id="dropdown2" class="dropdown-content">
-                <li><a href="http://localhost/busproject/public/routeofpotong1">สาย 1</a></li>
-                <li><a href="http://localhost/busproject/public/routeofpotong2">สาย 2</a></li>
-                <li><a href="http://localhost/busproject/public/routeofpotong3">สาย 3</a></li>
-                <li><a href="http://localhost/busproject/public/routeofpotong">ดูทุกสาย</a></li>
+                <li><a href="http://localhost/busproject/public/currentbus/1">คันที่1 เมือง-ป่าตอง</a></li>
+                <li><a href="http://localhost/busproject/public/currentbus/2">คันที่2 เมือง-เกาะแก้ว</a></li>
             </ul>
 
-            <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
+            <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกรถและสาย<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
       </div>
       <div id="map"></div>
       <script type="text/javascript">
@@ -85,10 +83,6 @@
             position: new google.maps.LatLng({{$position->position_latitude}}, {{$position->position_longitude}}),
             type: 'info'
           }
-          // {
-          //   position: new google.maps.LatLng(7.906895, 98.374439),
-          //   type: 'info'
-          // }
         ];
 
         for (var i = 0, feature; feature = features[i]; i++) {
