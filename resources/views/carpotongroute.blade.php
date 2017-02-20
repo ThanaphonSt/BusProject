@@ -82,63 +82,13 @@
 
         var features = [
           {
-            position: new google.maps.LatLng(7.896788, 98.368462),
+            position: new google.maps.LatLng({{$position->position_latitude}}, {{$position->position_longitude}}),
             type: 'info'
-          }, {
-            position: new google.maps.LatLng(7.906895, 98.374439),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91747, 151.22912),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91910, 151.22907),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91725, 151.23011),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91872, 151.23089),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91784, 151.23094),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91682, 151.23149),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91790, 151.23463),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91666, 151.23468),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.916988, 151.233640),
-            type: 'info'
-          }, {
-            position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-            type: 'parking'
-          }, {
-            position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
-            type: 'library'
           }
+          // {
+          //   position: new google.maps.LatLng(7.906895, 98.374439),
+          //   type: 'info'
+          // }
         ];
 
         for (var i = 0, feature; feature = features[i]; i++) {

@@ -36,4 +36,4 @@ Route::get('/routeofpotong3', 'BusController@map3');
 Route::get('/potongstopshopping', 'BusController@potongShopping');
 Route::get('/potongstophotel', 'BusController@potongHotel');
 Route::get('/potongstoprestaurant', 'BusController@potongRestaurant');
-Route::get('/currentbus', 'BusController@currentbus');
+Route::get('/currentbus/{id}', 'BusController@currentbus');

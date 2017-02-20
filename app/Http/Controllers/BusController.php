@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Position;
 use Illuminate\Http\Request;
 
 class BusController extends Controller {
@@ -77,13 +77,13 @@ class BusController extends Controller {
 		return view('potongstoprestaurant');
 	}
 
-	public function currentbus()
+
+	public function currentbus($id)
 	{
-		return view('carpotongroute');
+		$position = Position::find($id);
+		// dd($position);
+		return view('carpotongroute')->with('position', $position);
 	}
 
-	public function show($id)
-	{
-		
-	}
+
 }
