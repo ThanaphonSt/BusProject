@@ -158,7 +158,7 @@
                         <div class="userView z-depth-1">
                             <img class="background image-size" src="https://www.mx7.com/i/c45/6RtCp6.jpg" >
                             <div class="transbox hoverable home-layout ">
-                                <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="http://localhost/busproject/public/current">
+                                <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="{{url('/current')}}">
                                     <span class="home-font-size white-text truncate " >
                                         รถประจำทางภูเก็ต
                                     </span>
@@ -179,9 +179,9 @@
                             <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถโพถ้อง</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="http://localhost/busproject/public/routeofpotong" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
-                                    <li><a href="http://localhost/busproject/public/potongstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
-                                    <li><a href="http://localhost/busproject/public/currentbus/1" class="waves-effect truncate">ตำแหน่งรถปัจจุบัน</a></li>
+                                    <li><a href="{{url('/routeofpotong')}}" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
+                                    <li><a href="{{url('/potongstop')}}" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                    <li><a href="{{url('/currentbus/1')}}" class="waves-effect truncate">ตำแหน่งรถปัจจุบัน</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -189,8 +189,8 @@
                             <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถสองแถว</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="http://localhost/busproject/public/routeofsongteaw" class="waves-effect truncate">เส้นทางเดินรถสองแถว</a></li>
-                                    <li><a href="http://localhost/busproject/public/songteawstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                    <li><a href="{{url('/routeofsongteaw')}}" class="waves-effect truncate">เส้นทางเดินรถสองแถว</a></li>
+                                    <li><a href="{{url('/songteawstop')}}" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                                 </ul>
                             </div>                
                         </li>
@@ -198,8 +198,8 @@
                             <a class="collapsible-header waves-effect truncate"><i class="material-icons">info</i>รถแอร์พอร์ทบัส</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="http://localhost/busproject/public/routeofairportbus" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
-                                    <li><a href="http://localhost/busproject/public/airportstop" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                    <li><a href="{{url('/routeofairportbus')}}" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
+                                    <li><a href="{{url('/airportstop')}}" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                                 </ul>
                             </div>
                         </li> 
