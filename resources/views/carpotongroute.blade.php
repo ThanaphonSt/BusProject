@@ -35,8 +35,8 @@
 @section('content')
       <div class="teal darken-4">
             <ul id="dropdown2" class="dropdown-content">
-                <li><a href="http://localhost/busproject/public/currentbus/1">คันที่1 เมือง-ป่าตอง</a></li>
-                <li><a href="http://localhost/busproject/public/currentbus/2">คันที่2 เมือง-เกาะแก้ว</a></li>
+                <li><a href="http:{{url('/currentbus/1')}}">คันที่1 เมือง-ป่าตอง</a></li>
+                <li><a href="http:{{url('/currentbus/2')}}">คันที่2 เมือง-เกาะแก้ว</a></li>
             </ul>
 
             <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกรถและสาย<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
