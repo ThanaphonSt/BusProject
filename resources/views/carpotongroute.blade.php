@@ -35,18 +35,24 @@
 @section('content')
       <div class="teal darken-4">
             <ul id="dropdown2" class="dropdown-content">
-                <li><a href="http:{{url('/currentbus/1')}}">คันที่1 เมือง-ป่าตอง</a></li>
-                <li><a href="http:{{url('/currentbus/2')}}">คันที่2 เมือง-เกาะแก้ว</a></li>
+                <li><a href="{{url('/currentbus/1')}}">คันที่1 เมือง-ป่าตอง</a></li>
+                <li><a href="{{url('/currentbus/2')}}">คันที่2 เมือง-เกาะแก้ว</a></li>
             </ul>
 
             <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกรถและสาย<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
       </div>
       <div id="map"></div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script type="text/javascript">
             $('.dropdown-button').dropdown('open');
       </script>
       <script>
       // var map;
+      var latitude;
+      var longitude;
+        $.ajax({url: "http://rchelincle.me/api/v2/bus", success: function(result){
+            console.log(result);
+        }});
       function initMap() {
        var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
