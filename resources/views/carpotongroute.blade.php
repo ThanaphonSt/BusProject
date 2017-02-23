@@ -52,6 +52,8 @@
       var longitude;
         $.ajax({url: "http://rchelincle.me/api/v2/bus", success: function(result){
             console.log(result);
+            latitude = result.lat;
+            longitude = result.lon;
         }});
       function initMap() {
        var map = new google.maps.Map(document.getElementById('map'), {
@@ -86,7 +88,8 @@
 
         var features = [
           {
-            position: new google.maps.LatLng({{$position->position_latitude}}, {{$position->position_longitude}}),
+            position: new google.maps.LatLng({{$latitude}}, {{longitude}}),
+            // position: new google.maps.LatLng({{$position->position_latitude}}, {{$position->position_longitude}}),
             type: 'info'
           }
         ];
