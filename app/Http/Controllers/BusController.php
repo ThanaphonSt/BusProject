@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Position;
+use App\RoutePhothong;
 use Illuminate\Http\Request;
 
 class BusController extends Controller {
@@ -47,9 +48,19 @@ class BusController extends Controller {
 		return view('map');
 	}
 
-	public function map1()
+	public function map1($id)
 	{
-		return view('potongroute1');
+		$getRouteGoOn = RoutePhothong::where('route_line','=','1')
+			->where('route_trip','=','ขาไป')
+			->get();
+
+		$getRouteTurnOn = RoutePhothong::where('route_line','=','1')
+			->where('route_trip','=','ขากลับ')
+			->get();
+
+		return view('potongroute1')
+			->with('getRouteGoOns', $getRouteGoOn)
+			->with('getRouteTurnOns', $getRouteTurnOn);
 	}
 
 	public function map2()

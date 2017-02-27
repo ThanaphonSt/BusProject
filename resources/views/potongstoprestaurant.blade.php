@@ -20,9 +20,9 @@
 </style>
 <div class="teal darken-4">
     <ul id="dropdown2" class="dropdown-content">
-        <li><a href="http://localhost/busproject/public/potongstopshopping">ห้างสรรพสินค้า</a></li>
-        <li><a href="http://localhost/busproject/public/potongstoprestaurant">ร้านอาหาร</a></li>
-        <li><a href="http://localhost/busproject/public/potongstophotel">โรงแรม</a></li>
+        <li><a href="{{url('/potongstopshopping')}}">ห้างสรรพสินค้า</a></li>
+        <li><a href="{{url('/potongstoprestaurant')}}">ร้านอาหาร</a></li>
+        <li><a href="{{url('/potongstophotel')}}">โรงแรม</a></li>
     </ul>
     <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
 </div>
