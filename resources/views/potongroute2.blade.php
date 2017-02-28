@@ -21,9 +21,9 @@
 @section('content')  
         <div class="teal darken-4">
             <ul id="dropdown2" class="dropdown-content">
-                <li><a href="{{url('/routeofpotong/{id}')}}">สาย 1</a></li>
-                <li><a href="{{url('/routeofpotong2')}}">สาย 2</a></li>
-                <li><a href="{{url('/routeofpotong3')}}">สาย 3</a></li>
+                <li><a href="{{url('/routeofpotong1/1')}}">สาย 1</a></li>
+                <li><a href="{{url('/routeofpotong2/2')}}">สาย 2</a></li>
+                <li><a href="{{url('/routeofpotong3/3')}}">สาย 3</a></li>
                 <li><a href="{{url('/routeofpotong')}}">ดูทุกสาย</a></li>
             </ul>
             <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="        mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
@@ -35,9 +35,15 @@
   <br>
   <h5><p><dd>รถโพท้อง สายที่ 2</dd></p></h5>
   <p>ชื่อเส้นทาง : สถาบันราชภัฎภูเก็ต - สถานีอนามัยแหลมชั่น
-  <br><u>เที่ยวไป</u> : เริ่มต้นจากสถานที่จอดรถโดยสารประจำทาง บริเวณห้างซุปเปอร์ชิป ไปตามถนน เทพกระษัตรี ผ่านมหาวิทยาลัยราชภัฎภูเก็ต ผ่านโรงเรียนภูเก็ตเทคโนโลยี โรงเรียนภูเก็ต วิทยาลัย แยกซ้ายไปตามถนนดำรง ผ่านโรงเรียนสตรีภูเก็ต เรือนจำจังหวัดภูเก็ต แยกขวา ไปตามถนนสุรินทร์ ผ่านศาลากลางจังหวัดภูเก็ตสำนักงานเทศบาล แยกขวาไปตามถนน พังงา แยกขวาเข้าสถานีขนส่งผู้โดยสารจังหวัดภูเก็ต แล้วไปตามถนนดิลกอุทิศ 2 แยกขวา ไปตามถนนอ๋องซิมผ่าย ผ่านตลาดเกษตร ตรงไปตามถนนกระ ถนนพูนผล ผ่านโรงเรียน เทศบาลเมือง แยกซ้ายไปตามถนนบางกอก แยกซ้ายไปตามถนนเจ้าฟ้า ผ่านสวนหลวง ร. 9 ถึงทางแยกท่าแครง แยกซ้ายไปตามถนนศักดิเดช แยกขวาไปตามถนนพัฒนาท้องถิ่น ผ่านสถานีอนามัยแหลมชั่น ถึงทางแยก เลี้ยวซ้ายไปตามถนเจ้าฟ้าตะวันออก ไปสุด เส้นทาง ณ สถานที่จอดรถโดยสารประจำทางบริเวณตลาดใหม่มุมเมือง ระยะทางตลอด สาย ยาว 14 กม.
-  <br><u>เที่ยวกลับ</u> : เริ่มจากตลาดใหม่มุมเมือง ย้อนเส้นทางเที่ยวไป จนสุดสายที่บริเวณห้างซุปเปอร์ชิป
-
+    <br><u>เที่ยวไป</u> : <br>
+    @foreach($getRouteGoOns2 as $getRouteGoOn)
+        - {{$getRouteGoOn->route_name}} <br>
+    @endforeach
+   
+    <br><u>เที่ยวกลับ</u> : <br>
+    @foreach($getRouteTurnOns2 as $getRouteTurnOn)
+        - {{$getRouteTurnOn->route_name}} <br>
+    @endforeach
     <script>
 
       // This example creates a 2-pixel-wide red polyline showing the path of William

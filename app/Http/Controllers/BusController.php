@@ -50,27 +50,47 @@ class BusController extends Controller {
 
 	public function map1($id)
 	{
-		$getRouteGoOn = RoutePhothong::where('route_line','=','1')
+		$getRouteGoOn = RoutePhothong::where('route_line', $id)
 			->where('route_trip','=','ขาไป')
 			->get();
 
-		$getRouteTurnOn = RoutePhothong::where('route_line','=','1')
+		$getRouteTurnOn = RoutePhothong::where('route_line', $id)
 			->where('route_trip','=','ขากลับ')
-			->get();
+			->get();		
 
 		return view('potongroute1')
 			->with('getRouteGoOns', $getRouteGoOn)
 			->with('getRouteTurnOns', $getRouteTurnOn);
 	}
 
-	public function map2()
+	public function map2($id)
 	{
-		return view('potongroute2');
+		$getRouteGoOn2 = RoutePhothong::where('route_line', $id)
+			->where('route_trip','=','ขาไป')
+			->get();
+
+		$getRouteTurnOn2 = RoutePhothong::where('route_line', $id)
+			->where('route_trip','=','ขากลับ')
+			->get();		
+
+		return view('potongroute2')
+			->with('getRouteGoOns2', $getRouteGoOn2)
+			->with('getRouteTurnOns2', $getRouteTurnOn2);
 	}
 
-	public function map3()
+	public function map3($id)
 	{
-		return view('potongroute3');
+		$getRouteGoOn3 = RoutePhothong::where('route_line', $id)
+			->where('route_trip','=','ขาไป')
+			->get();
+
+		$getRouteTurnOn3 = RoutePhothong::where('route_line', $id)
+			->where('route_trip','=','ขากลับ')
+			->get();		
+
+		return view('potongroute3')
+			->with('getRouteGoOns3', $getRouteGoOn3)
+			->with('getRouteTurnOns3', $getRouteTurnOn3);
 	}
 
 	public function potongShopping()

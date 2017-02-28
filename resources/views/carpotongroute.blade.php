@@ -54,7 +54,7 @@
             longitude = result.lon;
         }});
       function initMap() {
-       var map = new google.maps.Map(document.getElementById('map'), {
+       var map = new google.maps.event.trigger(document.getElementById('map')('resize'), {
           zoom: 15,
           center: {lat: 7.883135, lng: 98.387156},
           mapTypeId: 'roadmap'
@@ -86,8 +86,7 @@
         
         var features = [
           {
-            position: new google.maps.LatLng(latitude, longitude),
-            // position: new google.maps.LatLng({{$position->position_latitude}}, {{$position->position_longitude}}),
+            position: new google.maps.LatLng({{$position->position_latitude}}, {{$position->position_longitude}}),
             type: 'info'
           }
         ];
