@@ -20,7 +20,7 @@
       
     </style>
 @section('content')
-      <div class="teal darken-4">
+      <div class="teal darken-3">
             <ul id="dropdown2" class="dropdown-content">
                 <li><a href="{{url('/routeofpotong1/1')}}">สาย 1</a></li>
                 <li><a href="{{url('/routeofpotong2/2')}}">สาย 2</a></li>

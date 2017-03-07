@@ -19,7 +19,7 @@
       
     </style>
 @section('content')  
-            <div class="teal darken-4">
+            <div class="teal darken-3">
                 <ul id="dropdown2" class="dropdown-content">
                 <li><a href="{{url('/routeofpotong1/1')}}">สาย 1</a></li>
                 <li><a href="{{url('/routeofpotong2/2')}}">สาย 2</a></li>
@@ -32,23 +32,35 @@
         <script type="text/javascript">
             $('.dropdown-button').dropdown('open');
         </script>
-  <h5><p><dd>รถโพท้อง สายที่ 3</dd></p></h5>
-<p>ชื่อเส้นทาง : ศูนย์การค้าโลตัส - วิทยาลัยอาชีวะศึกษาภูเก็ต
-  <br><u>เที่ยวไป</u> : <br>
-    @foreach($getRouteGoOns3 as $getRouteGoOn)
-        - {{$getRouteGoOn->route_name}} <br>
-    @endforeach
-   
-    <br><u>เที่ยวกลับ</u> : <br>
-    @foreach($getRouteTurnOns3 as $getRouteTurnOn)
-        - {{$getRouteTurnOn->route_name}} <br>
-    @endforeach
+
+        <div class="row teal darken-3 white-text">      
+            <div class="col s12 m12 l12">
+                <h4>รถโพท้อง สายที่ 3</h4>
+            </div>
+            <div class="col s12 m12 l12">
+                <h5>ชื่อเส้นทาง : ศูนย์การค้าโลตัส - วิทยาลัยอาชีวะศึกษาภูเก็ต</h5>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col s6 m6 l6 "> 
+                <div class="card horizontal">
+                    <u>เที่ยวไป </u>:<br>
+                        @foreach($getRouteGoOns3 as $getRouteGoOn)
+                        - {{$getRouteGoOn->route_name}} <br>
+                        @endforeach
+                </div>
+            </div>   
+            <div class="col s6 m6 l6">
+                <div class="card horizontal">
+                  <u>เที่ยวกลับ</u>:<br>
+                      @foreach($getRouteTurnOns3 as $getRouteTurnOn)
+                           - {{$getRouteTurnOn->route_name}} <br>
+                      @endforeach
+                </div>
+            </div>
+        </div>
+
     <script>
-
-      // This example creates a 2-pixel-wide red polyline showing the path of William
-      // Kingsford Smith's first trans-Pacific flight between Oakland, CA, and
-      // Brisbane, Australia.
-
       function initMap2() {
         var point1 = {lat: 7.866532, lng: 98.392749};
         var point2 = {lat: 7.870661, lng: 98.390715};

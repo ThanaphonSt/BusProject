@@ -18,7 +18,7 @@
         height: 100% !important;
     }
 </style>
-<div class="teal darken-4">
+<div class="teal darken-3">
     <ul id="dropdown2" class="dropdown-content">
         <li><a href="{{url('/potongstopshopping')}}">ห้างสรรพสินค้า</a></li>
         <li><a href="{{url('/potongstoprestaurant')}}">ร้านอาหาร</a></li>
