@@ -31,16 +31,14 @@
       
     </style>
 @section('content')
-      <div class="teal darken-4">
-            <ul id="dropdown2" class="dropdown-content">
-                <li><a href="{{url('/currentbus/1')}}">คันที่1 เมือง-ป่าตอง</a></li>
-                <li><a href="{{url('/currentbus/2')}}">คันที่2 เมือง-เกาะแก้ว</a></li>
-            </ul>
 
-            <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกรถและสาย<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
-      </div>
+<!-- <div id="floating-panel">
+      <input onclick="clearMarkers();" type=button value="Hide Markers">
+      <input onclick="showMarkers();" type=button value="Show All Markers">
+      <input onclick="deleteMarkers();" type=button value="Delete Markers">
+    </div> -->
     <div id="map"></div>
-
+    <p>Click on the map to add markers.</p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script type="text/javascript">
             $('.dropdown-button').dropdown('open');
