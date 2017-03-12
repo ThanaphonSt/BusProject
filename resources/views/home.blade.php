@@ -49,6 +49,7 @@
       // The user can then click an option to hide, show or delete the markers.
       var map;
       var markers = [];
+      var iconBase = 'https://nwrsturgeonrefinery.com/assets/themes/nwr/img/bus-icon-dark.png';
 
       function initMap() {
         var haightAshbury = {lat: 7.8959116, lng: 98.3676156};
@@ -72,6 +73,7 @@
       function addMarker(location) {
         var marker = new google.maps.Marker({
           position: location,
+          icon: iconBase,
           map: map
         });
         markers.push(marker);
