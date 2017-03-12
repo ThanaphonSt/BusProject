@@ -98,7 +98,8 @@
       function deleteMarkers() {
         clearMarkers();
         addMarker({lat:{{$position->position_latitude}}, lng:{{$position->position_longitude}}});
-        markers = [];
+        // console.log({lat:{{$position->position_latitude}}, lng:{{$position->position_longitude}}});
+        // markers = [];
       }
     </script>
     <script async defer
