@@ -1,6 +1,5 @@
 @extends('app')
 
-
   <head>
     <title>Remove Markers</title>
 
@@ -42,6 +41,10 @@
     </div>
     <div id="map"></div>
     <p>Click on the map to add markers.</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script type="text/javascript">
+            $('.dropdown-button').dropdown('open');
+      </script>
     <script>
 
       // In the following example, markers appear when the user clicks on the map.
@@ -50,6 +53,16 @@
       var map;
       var markers = [];
       var iconBase = 'https://nwrsturgeonrefinery.com/assets/themes/nwr/img/bus-icon-dark.png';
+      // var latitude;
+      // var longitude;
+      var results;
+      // var kuyy;
+        $.ajax({url: "http://139.59.250.117/api/v2/givepos", success: function(result){
+            console.log(result);
+            latitude = result.lat;
+            longitude = result.lon;
+            results = result;
+        }});
 
       function initMap() {
         var haightAshbury = {lat: 7.8959116, lng: 98.3676156};
@@ -66,7 +79,8 @@
         });
 
         // Adds a marker at the center of the map.
-        addMarker({lat:{{$position->position_latitude}}, lng:{{$position->position_longitude}}});
+        // addMarker({lat:{{$position->position_latitude}}, lng:{{$position->position_longitude}}});
+        // addMarker(results);
       }
 
       // Adds a marker to the map and push to the array.
@@ -94,13 +108,33 @@
       // Shows any markers currently in the array.
       function showMarkers() {
         setMapOnAll(map);
+        var i = 0;
+        while (i < 5) {
+    		console.log('ok'+i);
+    		i++;
+		}
+		setInterval(deleteMarkers, 5000);
       }
 
       // Deletes all markers in the array by removing references to them.
+      var latitude;
+      var longitude;
+      // var results;
+      
+
       function deleteMarkers() {
+      	$.ajax({url: "http://139.59.250.117/api/v2/givepos", success: function(result){
+            console.log(result);
+            latitude = result.lat;
+            longitude = result.lon;
+            results = result;
+        }});
+        kuyy = {lat: Number(latitude), lng: Number(longitude)};
         clearMarkers();
-        addMarker({lat:{{$position->position_latitude}}, lng:{{$position->position_longitude}}});
+        addMarker({lat: Number(latitude), lng: Number(longitude)});
         // console.log({lat:{{$position->position_latitude}}, lng:{{$position->position_longitude}}});
+        console.log(kuyy);
+        // console.log(haightAshbury);
         // markers = [];
       }
     </script>
