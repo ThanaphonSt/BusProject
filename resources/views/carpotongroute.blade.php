@@ -42,9 +42,7 @@
       </div>
     <div id="map"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script type="text/javascript">
-            $('.dropdown-button').dropdown('open');
-      </script>
+
     <script>
 
       // In the following example, markers appear when the user clicks on the map.
@@ -72,9 +70,9 @@
           mapTypeId: 'terrain'
         });
 
-        map.addListener('click', function(event) {
-          addMarker(event.latLng);
-        });
+        // map.addListener('click', function(event) {
+        //   addMarker(event.latLng);
+        // });
 
       }
 
