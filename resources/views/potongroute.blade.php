@@ -20,7 +20,7 @@
       
     </style>
 @section('content')
-      <div class="teal darken-3">
+      <div class="teal darken-4">
             <ul id="dropdown2" class="dropdown-content">
                 <li><a href="{{url('/routeofpotong1/1')}}">สาย 1</a></li>
                 <li><a href="{{url('/routeofpotong2/2')}}">สาย 2</a></li>
@@ -29,6 +29,9 @@
             </ul>
 
             <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
+            <span class= "card red white-text">สายที่1</span>
+            <span class= "card green white-text">สายที่2</span>
+            <span class= "card blue darken-4 white-text">สายที่3</span>
       </div>
       <div id="map"></div>
       <script type="text/javascript">

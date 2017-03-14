@@ -20,7 +20,7 @@
     </style>
 
 @section('content')  
-      <div class="teal darken-3">
+      <div class="teal darken-4">
             <ul id="dropdown2" class="dropdown-content">
                 <li><a href="{{url('/routeofpotong1/1')}}">สาย 1</a></li>
                 <li><a href="{{url('/routeofpotong2/2')}}">สาย 2</a></li>
@@ -36,7 +36,7 @@
         </script>
         <div class="row teal darken-3 white-text">      
             <div class="col s12 m12 l12">
-                <h4>รถโพท้อง สายที่ 1</h4>
+                <h4>รถโพถ้อง สายที่ 1</h4>
             </div>
             <div class="col s12 m12 l12">
                 <h5>ชื่อเส้นทาง: ศูนย์การค้าโลตัส - วิทยาลัยอาชีวะศึกษาภูเก็ต</h5>

@@ -32,7 +32,7 @@
     </style>
 @section('content')
 
-      <div class="teal darken-3">
+      <div class="teal darken-4">
             <ul id="dropdown2" class="dropdown-content">
                 <li><a href="{{url('/currentbus/1')}}">คันที่1 เมือง-ป่าตอง</a></li>
                 <li><a href="{{url('/currentbus/2')}}">คันที่2 เมือง-เกาะแก้ว</a></li>
@@ -56,7 +56,6 @@
       // var latitude;
       // var longitude;
       var results;
-      // var kuyy;
         $.ajax({url: "http://139.59.250.117/api/v2/givepos", success: function(result){
             console.log(result);
             latitude = result.lat;
@@ -73,14 +72,10 @@
           mapTypeId: 'terrain'
         });
 
-        // This event listener will call addMarker() when the map is clicked.
         map.addListener('click', function(event) {
           addMarker(event.latLng);
         });
 
-        // Adds a marker at the center of the map.
-        // addMarker({lat:{{$position->position_latitude}}, lng:{{$position->position_longitude}}});
-        // addMarker(results);
       }
 
       // Adds a marker to the map and push to the array.
@@ -108,12 +103,8 @@
       // Shows any markers currently in the array.
       function showMarkers() {
         setMapOnAll(map);
-        var i = 0;
-        while (i < 5) {
-        console.log('ok'+i);
-        i++;
-    }
-    setInterval(deleteMarkers, 5000);
+
+      setInterval(deleteMarkers, 5000);
       }
 
       // Deletes all markers in the array by removing references to them.
@@ -129,13 +120,11 @@
             longitude = result.lon;
             results = result;
         }});
-        kuyy = {lat: Number(latitude), lng: Number(longitude)};
+        result = {lat: Number(latitude), lng: Number(longitude)};
         clearMarkers();
         addMarker({lat: Number(latitude), lng: Number(longitude)});
-        // console.log({lat:{{$position->position_latitude}}, lng:{{$position->position_longitude}}});
-        console.log(kuyy);
-        // console.log(haightAshbury);
-        // markers = [];
+
+        console.log(result);
       }
       showMarkers();
     </script>

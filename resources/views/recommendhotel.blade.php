@@ -1,6 +1,6 @@
 @extends('app')
 @section('brand')
-ห้างสรรพสินค้า
+โรงแรม
 @endsection
 @section('content')
 <style>
@@ -18,11 +18,11 @@
         height: 100% !important;
     }
 </style>
-<div class="teal darken-3">
+<div class="teal darken-4">
     <ul id="dropdown2" class="dropdown-content">
-        <li><a href="{{url('/potongstopshopping')}}">ห้างสรรพสินค้า</a></li>
-        <li><a href="{{url('/potongstoprestaurant')}}">ร้านอาหาร</a></li>
-        <li><a href="{{url('/potongstophotel')}}">โรงแรม</a></li>
+        <li><a href="{{url('/recommendshopping')}}">ห้างสรรพสินค้า</a></li>
+        <li><a href="{{url('/recommendrestaurant')}}">ร้านอาหาร</a></li>
+        <li><a href="{{url('/recommendhotel')}}">โรงแรม</a></li>
     </ul>
     <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
 </div>
@@ -31,7 +31,7 @@
                   width="650"
                   height="450"
                   frameborder="0" style="border:0"
-                  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBYoKx2-ce6XMQDsCET7TD8RJiKVgTK-_0&q=shopping+in+Phuket" allowfullscreen>
+                  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBYoKx2-ce6XMQDsCET7TD8RJiKVgTK-_0&q=hotel+in+Phuket" allowfullscreen>
             </iframe>
       </div>
 

@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use App\Position;
 use App\RoutePhothong;
 use Illuminate\Http\Request;
+use App\BusstopPhothong;
+use App\Restaurant;
 
 class BusController extends Controller {
 
@@ -28,9 +30,11 @@ class BusController extends Controller {
 		return view('airportbusroute');
 	}	
 
-	public function potongStop()
+	public function recommend()
 	{
-		return view('potongstop');
+		$recommend = BusstopPhothong::get();
+		
+		return view('recommend');
 	}
 
 	public function songteawStop()
@@ -57,7 +61,7 @@ class BusController extends Controller {
 		$getRouteTurnOn = RoutePhothong::where('route_line', $id)
 			->where('route_trip','=','ขากลับ')
 			->get();		
-
+		
 		return view('potongroute1')
 			->with('getRouteGoOns', $getRouteGoOn)
 			->with('getRouteTurnOns', $getRouteTurnOn);
@@ -93,19 +97,21 @@ class BusController extends Controller {
 			->with('getRouteTurnOns3', $getRouteTurnOn3);
 	}
 
-	public function potongShopping()
+	public function recommendShopping()
 	{
-		return view('potongstopshop');
+		return view('recommendshop');
 	}
 
-	public function potongHotel()
+	public function recommendHotel()
 	{
-		return view('potongstophotel');
+		return view('recommendhotel');
 	}	
 
-	public function potongRestaurant()
+	public function recommendRestaurant()
 	{
-		return view('potongstoprestaurant');
+		$recommendRestaurant = Restaurant::get();
+
+		return view('recommendrestaurant')->with('recommendRestaurant', $recommendRestaurant);
 	}
 
 
@@ -113,7 +119,8 @@ class BusController extends Controller {
 	{
 		$position = Position::find($id);
 		// dd($position);
-		return view('carpotongroute')->with('position', $position);
+		return view('carpotongroute');
+		// ->with('position', $position);
 	}
 
 

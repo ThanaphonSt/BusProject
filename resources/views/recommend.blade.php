@@ -1,6 +1,6 @@
 @extends('app')
 @section('brand')
-สถานที่ท่องเที่ยวและร้านอาหาร
+สถานที่แนะนำ
 @endsection
 @section('content')
 <style>
@@ -18,11 +18,11 @@
         height: 100% !important;
     }
 </style>
-<div class="teal darken-3">
+<div class="teal darken-4">
     <ul id="dropdown2" class="dropdown-content">
-        <li><a href="{{url('/potongstopshopping')}}">ห้างสรรพสินค้า</a></li>
-        <li><a href="{{url('/potongstoprestaurant')}}">ร้านอาหาร</a></li>
-        <li><a href="{{url('/potongstophotel')}}">โรงแรม</a></li>
+        <li><a href="{{url('/recommendshopping')}}">ห้างสรรพสินค้า</a></li>
+        <li><a href="{{url('/recommendrestaurant')}}">ร้านอาหาร</a></li>
+        <li><a href="{{url('/recommendhotel')}}">โรงแรม</a></li>
     </ul>
     <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
 </div>
@@ -35,9 +35,5 @@
 		</iframe>
 	</div>
 
-  <script type="text/javascript">
-  	$(document).ready(function() {
-    	Materialize.updateTextFields();
-  	});
-  </script>
+ 
 @endsection
