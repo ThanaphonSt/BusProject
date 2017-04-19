@@ -156,7 +156,7 @@
                 <ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
                     <li>
                         <div class="userView z-depth-1">
-                            <img class="background image-size" src="https://www.mx7.com/i/c45/6RtCp6.jpg" >
+                            <img class="background image-size" src="https://www.img.in.th/images/ad112046d66045e4b65d1ebec20a54b5.jpg" >
                             <div class="transbox hoverable home-layout ">
                                 <a class ="waves-effect waves-light " data-position="right" data-delay="50" href="{{url('/current')}}">
                                     <span class="home-font-size white-text truncate " >

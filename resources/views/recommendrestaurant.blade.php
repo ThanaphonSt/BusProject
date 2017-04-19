@@ -50,7 +50,7 @@
             icon: 'http://minitmart.com/images/316/customassets/homepage/footericons/icon_food.png'
           }
         };
-          @foreach($recommendRestaurant as $recommendRestaurant)
+          
         function addMarker(feature) {
           var marker = new google.maps.Marker({
             position: feature.position,
@@ -58,20 +58,24 @@
             map: map
           });
         }
-        
-        var features = [
-          { 
+        var $recommendRestauran = JSON.parse("{{ json_encode($recommendRestaurant) }}");
+        console($recommendRestauran);
 
-            position: new google.maps.LatLng({{$recommendRestaurant->restaurant_latitude}}, {{$recommendRestaurant->restaurant_longitude}}),
+        var features = [
+        
+          { 
+            position: new google.maps.LatLng(),
             type: 'info'
+            
           }
+        
         ];
-        @endforeach
+        
 
         for (var i = 0, feature; feature = features[i]; i++) {
           addMarker(feature);
         }
-
+        console.log(features);
         var legend = document.getElementById('legend');
         
         
