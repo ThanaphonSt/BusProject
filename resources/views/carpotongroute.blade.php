@@ -54,7 +54,7 @@
       // var latitude;
       // var longitude;
       var results;
-        $.ajax({url: "http://139.59.250.117/api/v2/givepos", success: function(result){
+        $.ajax({url: "http://128.199.152.29/api/v2/givepos", success: function(result){
             console.log(result);
             latitude = result.lat;
             longitude = result.lon;
@@ -80,7 +80,15 @@
       function addMarker(location) {
         var marker = new google.maps.Marker({
           position: location,
-          icon: iconBase,
+          // icon: iconBase,
+          icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 10,
+                fillColor: 'green',
+                fillOpacity: 1,
+                strokeColor: 'white',
+                strokeWeight: 3
+            },
           map: map
         });
         markers.push(marker);
@@ -112,7 +120,7 @@
       
 
       function deleteMarkers() {
-        $.ajax({url: "http://139.59.250.117/api/v2/givepos", success: function(result){
+        $.ajax({url: "http://128.199.152.29/api/v2/givepos", success: function(result){
             console.log(result);
             latitude = result.lat;
             longitude = result.lon;
