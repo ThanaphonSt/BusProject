@@ -28,59 +28,33 @@
           <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
       </div>
       <script>
-      function initMap() {
-       var map = new google.maps.Map(document.getElementById('map'), {
+
+       function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: {lat: 7.883135, lng: 98.387156},
           mapTypeId: 'roadmap'
         });
-
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = {
-          parking: {
-            name: 'Parking',
-            icon: 'http://blog.toledocard.com/wp-content/uploads/2015/10/transport_icon_01.png'
-          },
-          library: {
-            name: 'Library',
-            icon: 'http://blog.toledocard.com/wp-content/uploads/2015/10/transport_icon_01.png'
-          },
-          info: {
-            name: 'Info',
-            icon: 'http://minitmart.com/images/316/customassets/homepage/footericons/icon_food.png'
-          }
-        };
-          
-        function addMarker(feature) {
-          var marker = new google.maps.Marker({
-            position: feature.position,
-            icon: icons[feature.type].icon,
-            map: map
-          });
+        var icons = 'https://www.heartofbiking.org.nz/assets/Uploads/HOB-Icon-Food-25px.png';
+        @foreach($recommendRestaurant as $restaurant)
+        var marker{{$restaurant->restaurant_id}} = new google.maps.Marker({
+          place_id: {{$restaurant->restaurant_id}},
+          position: {lat: {{$restaurant->restaurant_latitude}}, lng: {{$restaurant->restaurant_longitude}}},
+          map: map,
+          icon: icons
+        });
+        var infowindow{{$restaurant->restaurant_id}} = new google.maps.InfoWindow({
+          content: '{{$restaurant->restaurant_name}}'
+        });
+        marker{{$restaurant->restaurant_id}}.addListener('click', function() {
+        infowindow{{$restaurant->restaurant_id}}.open(map, marker{{$restaurant->restaurant_id}});
+        });
+        @endforeach
         }
-        var $recommendRestauran = JSON.parse("{{ json_encode($recommendRestaurant) }}");
-        console($recommendRestauran);
-
-        var features = [
-        
-          { 
-            position: new google.maps.LatLng(),
-            type: 'info'
-            
-          }
-        
-        ];
-        
-
-        for (var i = 0, feature; feature = features[i]; i++) {
-          addMarker(feature);
-        }
-        console.log(features);
-        var legend = document.getElementById('legend');
-        
-        
-      }
     </script>
+
+
     
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
