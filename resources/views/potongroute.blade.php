@@ -34,9 +34,6 @@
             <span class= "card blue darken-4 white-text">สายที่3</span>
       </div>
       <div id="map"></div>
-      <script type="text/javascript">
-            $('.dropdown-button').dropdown('open');
-      </script>
       <script>
 
       function initMap() {
