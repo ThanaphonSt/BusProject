@@ -7,6 +7,9 @@ use App\RoutePhothong;
 use Illuminate\Http\Request;
 use App\BusstopPhothong;
 use App\Restaurant;
+use App\Attractions;
+use App\Hotel;
+use App\ShoppingMall;
 
 class BusController extends Controller {
 
@@ -32,9 +35,9 @@ class BusController extends Controller {
 
 	public function recommend()
 	{
-		$recommend = BusstopPhothong::get();
-		
-		return view('recommend');
+		$recommend = Attractions::get();
+		// dd($recommend);
+		return view('recommend')->with('recommend', $recommend);
 	}
 
 	public function songteawStop()
@@ -108,12 +111,16 @@ class BusController extends Controller {
 
 	public function recommendShopping()
 	{
-		return view('recommendshop');
+		$recommendShop = ShoppingMall::get();
+		// dd($recommendShop);
+		return view('recommendshop')->with('recommendShop', $recommendShop);
 	}
 
 	public function recommendHotel()
 	{
-		return view('recommendhotel');
+		$recommendHotel = Hotel::get();
+		// dd($recommendHotel);
+		return view('recommendhotel')->with('recommendHotel', $recommendHotel);
 	}	
 
 	public function recommendRestaurant()
