@@ -30,6 +30,7 @@ RUN git checkout --track origin/develop
 #install mysql
 # RUN apt-get install -y mysql-server
 # RUN mysql_install_db
+# apt-get install php5-mysql    #####<<< PDO DRIVER
 # mysqladmin -p -u root version
 # mysql -u root -p
 # mysql> CREATE DATABASE allbus;
@@ -40,3 +41,4 @@ EXPOSE 80
 CMD [ "php", "artisan", "serve" ]
 
 #$ docker build -t plzpeacez/laravel .
+#$ docker run -dit -p 80:80 --name laravel plzpeacez/laravel
