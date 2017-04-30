@@ -32,6 +32,9 @@ RUN git checkout --track origin/develop
 # RUN mysql_install_db
 # mysqladmin -p -u root version
 # mysql -u root -p
+# mysql> CREATE DATABASE allbus;
+RUN wget https://raw.githubusercontent.com/ThanaphonSt/BusProject/develop/allbus.sql
+# mysql -u root -p1234 allbus < allbus.sql
 
 EXPOSE 80
 CMD [ "php", "artisan", "serve" ]
