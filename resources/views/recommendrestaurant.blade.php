@@ -27,8 +27,8 @@
           </ul>
           <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
       </div>
-      <script>
 
+    <script>
        function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
@@ -54,8 +54,6 @@
         }
     </script>
 
-
-    
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
     </script>
