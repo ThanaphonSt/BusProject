@@ -23,9 +23,17 @@ server {\
 RUN service nginx restart
 RUN php5enmod mcrypt
 RUN curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-RUN git clone https://github.com/ThanaphonSt/BusProject.git && cd BusProject
+RUN git clone https://github.com/ThanaphonSt/BusProject.git && cd BusProject && composer install
+WORKDIR /BusProject
 RUN git checkout --track origin/develop
 
+#install mysql
+# RUN apt-get install -y mysql-server
+# RUN mysql_install_db
+# mysqladmin -p -u root version
+# mysql -u root -p
+
 EXPOSE 80
+CMD [ "php", "artisan", "serve" ]
 
 #$ docker build -t plzpeacez/laravel .
