@@ -10,6 +10,8 @@ use App\Restaurant;
 use App\Attractions;
 use App\Hotel;
 use App\ShoppingMall;
+use App\BusstopAirport;
+use App\RoadAirport;
 
 class BusController extends Controller {
 
@@ -30,7 +32,12 @@ class BusController extends Controller {
 
 	public function airportBusRouteDetail()
 	{
-		return view('airportbusroute');
+		$airportbusroute = BusstopAirport::get();
+		$roadAirport = RoadAirport::get();
+		return view('airportbusroute')
+				->with('airportbusroute', $airportbusroute)
+				->with('roadAirport', $roadAirport);
+
 	}	
 
 	public function recommend()
@@ -66,7 +73,7 @@ class BusController extends Controller {
 			->get();	
 
 		$getRouteId = BusstopPhothong::where('busstop_line', $id)->get();
-		
+		// dd($getRouteId);
 		return view('potongroute1')
 			->with('getRouteGoOns', $getRouteGoOn)
 			->with('getRouteTurnOns', $getRouteTurnOn)

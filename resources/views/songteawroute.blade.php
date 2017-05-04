@@ -25,9 +25,5 @@
  		   		&q=Space+Needle,Seattle+WA" allowfullscreen>
 			</iframe>
 		</div>
-  <script type="text/javascript">
-  	$(document).ready(function() {
-    	Materialize.updateTextFields();
-  	});
-  </script>
+
 @endsection

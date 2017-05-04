@@ -7,7 +7,7 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 80%;
+        height: 100%;
         width: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
@@ -29,9 +29,7 @@
             <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="        mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
         </div>
         <div id="map"></div>
-        <script type="text/javascript">
-            $('.dropdown-button').dropdown('open');
-        </script>
+
     <div class="row teal darken-3 white-text">      
             <div class="col s12 m12 l12">
                 <h4>รถโพถ้อง สายที่ 2</h4>

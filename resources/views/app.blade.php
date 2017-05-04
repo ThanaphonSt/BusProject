@@ -185,7 +185,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="collapsible-header waves-effect"><i class="material-icons">info</i>รถสองแถว</a>
                             <div class="collapsible-body">
                                 <ul>
@@ -193,13 +193,13 @@
                                     <li><a href="{{url('/songteawstop')}}" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
                                 </ul>
                             </div>                
-                        </li>
+                        </li> -->
                         <li>
                             <a class="collapsible-header waves-effect truncate"><i class="material-icons">info</i>รถแอร์พอร์ทบัส</a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li><a href="{{url('/routeofairportbus')}}" class="waves-effect truncate">เส้นทางเดินรถแอร์พอร์ทบัส</a></li>
-                                    <li><a href="{{url('/airportstop')}}" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li>
+                                   <!--  <li><a href="{{url('/airportstop')}}" class="waves-effect truncate">สถานที่ท่องเที่ยวและร้านอาหาร</a></li> -->
                                 </ul>
                             </div>
                         </li> 

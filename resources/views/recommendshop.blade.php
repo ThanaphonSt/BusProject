@@ -24,6 +24,8 @@
         <li><a href="{{url('/recommendhotel')}}">โรงแรม</a></li>
     </ul>
     <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
+</div>
+<div id="map"></div>
    <script>
        function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -54,7 +56,4 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
     </script>
-
-     <div id="map"></div>
-
  @endsection

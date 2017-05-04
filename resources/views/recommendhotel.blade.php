@@ -16,13 +16,15 @@
       }
     </style>
 @section('content')
-<div class="teal darken-4">
+  <div class="teal darken-4">
     <ul id="dropdown2" class="dropdown-content">
         <li><a href="{{url('/recommendshopping')}}">ห้างสรรพสินค้า</a></li>
         <li><a href="{{url('/recommendrestaurant')}}">ร้านอาหาร</a></li>
         <li><a href="{{url('/recommendhotel')}}">โรงแรม</a></li>
     </ul>
     <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสิ่งที่คุณสนใจ<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
+  </div>
+  <div id="map"></div>
    <script>
        function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -54,6 +56,6 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTT9UOlmNjSStQdUc0GcDXa2cfZG4EdB4&callback=initMap">
     </script>
 
-     <div id="map"></div>
+
 
  @endsection
