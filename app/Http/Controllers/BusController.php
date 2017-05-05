@@ -12,6 +12,7 @@ use App\Hotel;
 use App\ShoppingMall;
 use App\BusstopAirport;
 use App\RoadAirport;
+use App\RoadPhothong;
 
 class BusController extends Controller {
 
@@ -73,11 +74,21 @@ class BusController extends Controller {
 			->get();	
 
 		$getRouteId = BusstopPhothong::where('busstop_line', $id)->get();
-		// dd($getRouteId);
+
+		$getRoadGo = RoadPhothong::where('road_line', $id)
+			->where('road_trip','=','ขาไป')
+			->get();
+
+		$getRoadBack = RoadPhothong::where('road_line', $id)
+			->where('road_trip','=','ขากลับ')
+			->get();		
+
 		return view('potongroute1')
 			->with('getRouteGoOns', $getRouteGoOn)
 			->with('getRouteTurnOns', $getRouteTurnOn)
-			->with('getRouteId', $getRouteId);
+			->with('getRouteId', $getRouteId)
+			->with('getRoadGo', $getRoadGo)
+			->with('getRoadBack', $getRoadBack);
 	}
 
 	public function map2($id)
@@ -90,12 +101,22 @@ class BusController extends Controller {
 			->where('route_trip','=','ขากลับ')
 			->get();		
 
-		$getRouteId = BusstopPhothong::where('busstop_line', $id)->get();
+		$getRouteId2 = BusstopPhothong::where('busstop_line', $id)->get();
+
+		$getRoadGo2 = RoadPhothong::where('road_line', $id)
+			->where('road_trip','=','ขาไป')
+			->get();
+
+		$getRoadBack2 = RoadPhothong::where('road_line', $id)
+			->where('road_trip','=','ขากลับ')
+			->get();		
 
 		return view('potongroute2')
-			->with('getRouteGoOns2', $getRouteGoOn2)
-			->with('getRouteTurnOns2', $getRouteTurnOn2)
-			->with('getRouteId', $getRouteId);
+			->with('getRouteGoOn2', $getRouteGoOn2)
+			->with('getRouteTurnOn2', $getRouteTurnOn2)
+			->with('getRouteId2', $getRouteId2)
+			->with('getRoadGo2', $getRoadGo2)
+			->with('getRoadBack2', $getRoadBack2);
 	}
 
 	public function map3($id)
@@ -108,12 +129,22 @@ class BusController extends Controller {
 			->where('route_trip','=','ขากลับ')
 			->get();		
 
-		$getRouteId = BusstopPhothong::where('busstop_line', $id)->get();
+		$getRouteId3 = BusstopPhothong::where('busstop_line', $id)->get();
+
+		$getRoadGo3 = RoadPhothong::where('road_line', $id)
+			->where('road_trip','=','ขาไป')
+			->get();
+
+		$getRoadBack3 = RoadPhothong::where('road_line', $id)
+			->where('road_trip','=','ขากลับ')
+			->get();		
 
 		return view('potongroute3')
-			->with('getRouteGoOns3', $getRouteGoOn3)
-			->with('getRouteTurnOns3', $getRouteTurnOn3)
-			->with('getRouteId', $getRouteId);
+			->with('getRouteGoOn3', $getRouteGoOn3)
+			->with('getRouteTurnOn3', $getRouteTurnOn3)
+			->with('getRouteId3', $getRouteId3)
+			->with('getRoadGo3', $getRoadGo3)
+			->with('getRoadBack3', $getRoadBack3);
 	}
 
 	public function recommendShopping()

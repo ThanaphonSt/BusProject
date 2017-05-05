@@ -29,9 +29,6 @@
                 <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
             </div>
         <div id="map"></div>
-        <script type="text/javascript">
-            $('.dropdown-button').dropdown('open');
-        </script>
 
         <div class="row teal darken-3 white-text">      
             <div class="col s12 m12 l12">
@@ -45,7 +42,7 @@
             <div class="col s6 m6 l6 "> 
                 <div class="card horizontal">
                     <u>เที่ยวไป </u>:<br>
-                        @foreach($getRouteGoOns3 as $getRouteGoOn)
+                        @foreach($getRouteGoOn3 as $getRouteGoOn)
                         - {{$getRouteGoOn->route_name}} <br>
                         @endforeach
                 </div>
@@ -53,7 +50,7 @@
             <div class="col s6 m6 l6">
                 <div class="card horizontal">
                   <u>เที่ยวกลับ</u>:<br>
-                      @foreach($getRouteTurnOns3 as $getRouteTurnOn)
+                      @foreach($getRouteTurnOn3 as $getRouteTurnOn)
                            - {{$getRouteTurnOn->route_name}} <br>
                       @endforeach
                 </div>
@@ -75,7 +72,7 @@
         var point11 = {lat: 7.884131, lng: 98.426926};
         var point12 = {lat: 7.870947, lng: 98.432618};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
+          zoom: 14,
           center: {lat: 7.883135, lng: 98.387156},
           mapTypeId: 'roadmap'
         });
