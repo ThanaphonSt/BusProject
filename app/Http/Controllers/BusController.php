@@ -23,7 +23,20 @@ class BusController extends Controller {
 
 	public function potongRouteDetail()
 	{
-		return view('potongroute');
+		$getRoadGo = RoadPhothong::where('road_line','=','1')
+			->get();
+
+		$getRoadGo2 = RoadPhothong::where('road_line','=','2')
+			->get();
+
+		$getRoadGo3 = RoadPhothong::where('road_line','=','3')
+			->get();
+
+
+		return view('potongroute')
+			->with('getRoadGo', $getRoadGo)
+			->with('getRoadGo2', $getRoadGo2)
+			->with('getRoadGo3', $getRoadGo3);
 	}	
 
 	public function songteawRouteDetail()

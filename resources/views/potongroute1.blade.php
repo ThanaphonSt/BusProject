@@ -29,6 +29,8 @@
             </ul>
 
             <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
+            <span class= "card red accent-4 white-text">ขาไป</span>
+            <span class= "card red accent-1 white-text">ขากลับ</span>
       </div>
         <div id="map"></div>
 
@@ -43,7 +45,7 @@
         <div class="row ">
             <div class="col s6 m6 l6 "> 
                 <div class="card horizontal">
-                    <u>เที่ยวไป </u>:<br>
+                    <u>ขาไป </u>:<br>
                         @foreach($getRouteGoOns as $getRouteGoOn)
                         - {{$getRouteGoOn->route_name}} <br>
                         @endforeach
@@ -51,7 +53,7 @@
             </div>   
             <div class="col s6 m6 l6">
                 <div class="card horizontal">
-                  <u>เที่ยวกลับ</u>:<br>
+                  <u>ขากลับ</u>:<br>
                       @foreach($getRouteTurnOns as $getRouteTurnOn)
                            - {{$getRouteTurnOn->route_name}} <br>
                       @endforeach
@@ -93,14 +95,14 @@
             var busPath1 = new google.maps.Polyline({
               path: busNumber1,
               geodesic: true,
-              strokeColor: '#FF0000',
+              strokeColor: '#d50000',
               strokeOpacity: 5.0,
               strokeWeight: 3
             });
             var buspath1back= new google.maps.Polyline({
               path: busNumber1back,
               geodesic: true,
-              strokeColor: '#2729A8',
+              strokeColor: '#ff8a80',
               strokeOpacity: 5.0,
               strokeWeight: 3
             });

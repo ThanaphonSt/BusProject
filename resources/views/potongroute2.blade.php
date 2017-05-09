@@ -27,6 +27,8 @@
                 <li><a href="{{url('/routeofpotong')}}">ดูทุกสาย</a></li>
             </ul>
             <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="        mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
+            <span class= "card green darken-4 white-text">ขาไป</span>
+            <span class= "card green darken-1 white-text">ขากลับ</span>            
         </div>
         <div id="map"></div>
 
@@ -41,7 +43,7 @@
         <div class="row ">
             <div class="col s6 m6 l6 "> 
                 <div class="card horizontal">
-                    <u>เที่ยวไป </u>:<br>
+                    <u>ขาไป </u>:<br>
                         @foreach($getRouteGoOn2 as $getRouteGoOn)
                         - {{$getRouteGoOn->route_name}} <br>
                         @endforeach
@@ -49,7 +51,7 @@
             </div>   
             <div class="col s6 m6 l6">
                 <div class="card horizontal">
-                  <u>เที่ยวกลับ</u>:<br>
+                  <u>ขากลับ</u>:<br>
                       @foreach($getRouteTurnOn2 as $getRouteTurnOn)
                            - {{$getRouteTurnOn->route_name}} <br>
                       @endforeach
@@ -93,20 +95,21 @@
         var busPath2go = new google.maps.Polyline({
           path: busnumber2go,
           geodesic: true,
-          strokeColor: '#11BB00',
+          strokeColor: '#1b5e20',
           strokeOpacity: 1.0,
           strokeWeight: 2
         });
         var busPath2back = new google.maps.Polyline({
           path: busnumber2back,
           geodesic: true,
-          strokeColor: '#FF0000',
+          strokeColor: '#43a047',
           strokeOpacity: 1.0,
           strokeWeight: 2
         });
         busPath2go.setMap(map);
         busPath2back.setMap(map);
         }
+        var markers = [];
 
               // Adds a marker to the map and push to the array.
       function addMarker(location) {
