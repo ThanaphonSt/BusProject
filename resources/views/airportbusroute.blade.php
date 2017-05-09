@@ -27,9 +27,16 @@
                     mapTypeId: 'roadmap'
                 });
                   @foreach($airportbusroute as $airportbusroutes)
-                  var marker = new google.maps.Marker({
+                  var marker{{$airportbusroutes->busstop_id}} = new google.maps.Marker({
                     position: {lat: {{$airportbusroutes->busstop_latitude}}, lng: {{$airportbusroutes->busstop_longitude}}},
                     map: map
+                  });
+
+                  var infowindow{{$airportbusroutes->busstop_id}} = new google.maps.InfoWindow({
+                    content: '{{$airportbusroutes->busstop_name}}'
+                  });
+                  marker{{$airportbusroutes->busstop_id}}.addListener('click', function() {
+                  infowindow{{$airportbusroutes->busstop_id}}.open(map, marker{{$airportbusroutes->busstop_id}});
                   });
                   @endforeach
 
