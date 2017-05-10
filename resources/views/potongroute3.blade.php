@@ -28,7 +28,7 @@
                 </ul>
                 <a class="btn dropdown-button" href="#!" data-activates="dropdown2">เลือกสายรถประจำทาง<i class="mdi-navigation-arrow-drop-down right material-icons">toc</i></a>
             <span class= "card indigo darken-4 white-text">ขาไป</span>
-            <span class= "card indigo darken-1 white-text">ขากลับ</span>                
+            <span class= "card  blue white-text">ขากลับ</span>                
             </div>
         <div id="map"></div>
 
@@ -44,16 +44,16 @@
             <div class="col s6 m6 l6 "> 
                 <div class="card horizontal">
                     <u>ขาไป </u>:<br>
-                        @foreach($getRouteGoOn3 as $getRouteGoOn)
-                        - {{$getRouteGoOn->route_name}} <br>
+                        @foreach($getRouteGoOn3 as $key=>$getRouteGoOn)
+                        {{$key+1}}. {{$getRouteGoOn->route_name}} <br>
                         @endforeach
                 </div>
             </div>   
             <div class="col s6 m6 l6">
                 <div class="card horizontal">
                   <u>ขากลับ</u>:<br>
-                      @foreach($getRouteTurnOn3 as $getRouteTurnOn)
-                           - {{$getRouteTurnOn->route_name}} <br>
+                      @foreach($getRouteTurnOn3 as $key=>$getRouteTurnOn)
+                      {{$key+1}}. {{$getRouteTurnOn->route_name}} <br>
                       @endforeach
                 </div>
             </div>
@@ -67,13 +67,13 @@
                     mapTypeId: 'roadmap'
                 });
 
-            @foreach($getRouteId3 as $getRoudeIds)
+            @foreach($getRouteId3 as $key=>$getRoudeIds)
             var marker{{$getRoudeIds->busstop_id}} = new google.maps.Marker({
                 position: {lat: {{$getRoudeIds->busstop_latitude}}, lng: {{$getRoudeIds->busstop_longitude}}},
               map: map
             });
             var infowindow{{$getRoudeIds->busstop_id}} = new google.maps.InfoWindow({
-              content: '{{$getRoudeIds->busstop_name}}'
+              content: '{{$key+1}}. {{$getRoudeIds->busstop_name}}'
             });
             marker{{$getRoudeIds->busstop_id}}.addListener('click', function() {
             infowindow{{$getRoudeIds->busstop_id}}.open(map, marker{{$getRoudeIds->busstop_id}});
@@ -103,7 +103,7 @@
         var busPath3back = new google.maps.Polyline({
           path: busnumber3back,
           geodesic: true,
-          strokeColor: '#3949ab',
+          strokeColor: '#2196f3',
           strokeOpacity: 1.0,
           strokeWeight: 2
         });

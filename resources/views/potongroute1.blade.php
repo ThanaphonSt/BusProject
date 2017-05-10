@@ -46,16 +46,16 @@
             <div class="col s6 m6 l6 "> 
                 <div class="card horizontal">
                     <u>ขาไป </u>:<br>
-                        @foreach($getRouteGoOns as $getRouteGoOn)
-                        - {{$getRouteGoOn->route_name}} <br>
+                        @foreach($getRouteGoOns as $key=>$getRouteGoOn)
+                        {{$key+1}}.  {{$getRouteGoOn->route_name}} <br>
                         @endforeach
                 </div>
             </div>   
             <div class="col s6 m6 l6">
                 <div class="card horizontal">
                   <u>ขากลับ</u>:<br>
-                      @foreach($getRouteTurnOns as $getRouteTurnOn)
-                           - {{$getRouteTurnOn->route_name}} <br>
+                      @foreach($getRouteTurnOns as $key=>$getRouteTurnOn)
+                        {{$key+1}}.  {{$getRouteTurnOn->route_name}} <br>
                       @endforeach
                 </div>
             </div>
@@ -68,13 +68,14 @@
                 center: {lat: 7.883135, lng: 98.387156},
                 mapTypeId: 'roadmap'
             });
-            @foreach($getRouteId as $getRoudeIds)
+            var number = [];
+            @foreach($getRouteId as $key=>$getRoudeIds)
             var marker{{$getRoudeIds->busstop_id}} = new google.maps.Marker({
                 position: {lat: {{$getRoudeIds->busstop_latitude}}, lng: {{$getRoudeIds->busstop_longitude}}},
               map: map
             });
             var infowindow{{$getRoudeIds->busstop_id}} = new google.maps.InfoWindow({
-              content: '{{$getRoudeIds->busstop_name}}'
+              content: '{{$key+1}}. {{$getRoudeIds->busstop_name}}'
             });
             marker{{$getRoudeIds->busstop_id}}.addListener('click', function() {
             infowindow{{$getRoudeIds->busstop_id}}.open(map, marker{{$getRoudeIds->busstop_id}});
