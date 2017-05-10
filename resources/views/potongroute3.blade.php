@@ -45,7 +45,7 @@
                 <div class="card horizontal">
                     <u>ขาไป </u>:<br>
                         @foreach($getRouteGoOn3 as $key=>$getRouteGoOn)
-                        {{$key+1}}. {{$getRouteGoOn->route_name}} <br>
+                        {{$key+1}}. {{$getRouteGoOn->busstop_name}} <br>
                         @endforeach
                 </div>
             </div>   
@@ -53,7 +53,7 @@
                 <div class="card horizontal">
                   <u>ขากลับ</u>:<br>
                       @foreach($getRouteTurnOn3 as $key=>$getRouteTurnOn)
-                      {{$key+1}}. {{$getRouteTurnOn->route_name}} <br>
+                      {{$key+19}}. {{$getRouteTurnOn->busstop_name}} <br>
                       @endforeach
                 </div>
             </div>

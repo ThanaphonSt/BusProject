@@ -46,16 +46,16 @@
             <div class="col s6 m6 l6 "> 
                 <div class="card horizontal">
                     <u>ขาไป </u>:<br>
-                        @foreach($getRouteGoOns as $key=>$getRouteGoOn)
-                        {{$key+1}}.  {{$getRouteGoOn->route_name}} <br>
+                        @foreach($getRouteGoOn as $key=>$getRouteGoOn)
+                          {{$key+1}}.  {{$getRouteGoOn->busstop_name}} <br>
                         @endforeach
                 </div>
             </div>   
             <div class="col s6 m6 l6">
                 <div class="card horizontal">
                   <u>ขากลับ</u>:<br>
-                      @foreach($getRouteTurnOns as $key=>$getRouteTurnOn)
-                        {{$key+1}}.  {{$getRouteTurnOn->route_name}} <br>
+                      @foreach($getRouteTurnOn as $key=>$getRouteTurnOn)
+                        {{$key+26}}.  {{$getRouteTurnOn->busstop_name}} <br>
                       @endforeach
                 </div>
             </div>

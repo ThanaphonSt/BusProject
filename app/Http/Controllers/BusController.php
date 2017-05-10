@@ -78,12 +78,12 @@ class BusController extends Controller {
 
 	public function map1($id)
 	{
-		$getRouteGoOn = RoutePhothong::where('route_line', $id)
-			->where('route_trip','=','ขาไป')
+		$getRouteGoOn = BusstopPhothong::where('busstop_line', $id)
+			->where(' busstop_trip','ขาไป')
 			->get();
 
-		$getRouteTurnOn = RoutePhothong::where('route_line', $id)
-			->where('route_trip','=','ขากลับ')
+		$getRouteTurnOn = BusstopPhothong::where('busstop_line', $id)
+			->where(' busstop_trip','ขากลับ')
 			->get();	
 
 		$getRouteId = BusstopPhothong::where('busstop_line', $id)->get();
@@ -97,8 +97,8 @@ class BusController extends Controller {
 			->get();		
 
 		return view('potongroute1')
-			->with('getRouteGoOns', $getRouteGoOn)
-			->with('getRouteTurnOns', $getRouteTurnOn)
+			->with('getRouteGoOn', $getRouteGoOn)
+			->with('getRouteTurnOn', $getRouteTurnOn)
 			->with('getRouteId', $getRouteId)
 			->with('getRoadGo', $getRoadGo)
 			->with('getRoadBack', $getRoadBack);
@@ -106,12 +106,12 @@ class BusController extends Controller {
 
 	public function map2($id)
 	{
-		$getRouteGoOn2 = RoutePhothong::where('route_line', $id)
-			->where('route_trip','=','ขาไป')
+		$getRouteGoOn2 = BusstopPhothong::where('busstop_line', $id)
+			->where(' busstop_trip','=','ขาไป')
 			->get();
 
-		$getRouteTurnOn2 = RoutePhothong::where('route_line', $id)
-			->where('route_trip','=','ขากลับ')
+		$getRouteTurnOn2 = BusstopPhothong::where('busstop_line', $id)
+			->where(' busstop_trip','=','ขากลับ')
 			->get();		
 
 		$getRouteId2 = BusstopPhothong::where('busstop_line', $id)->get();
@@ -134,12 +134,12 @@ class BusController extends Controller {
 
 	public function map3($id)
 	{
-		$getRouteGoOn3 = RoutePhothong::where('route_line', $id)
-			->where('route_trip','=','ขาไป')
+		$getRouteGoOn3 = BusstopPhothong::where('busstop_line', $id)
+			->where(' busstop_trip','=','ขาไป')
 			->get();
 
-		$getRouteTurnOn3 = RoutePhothong::where('route_line', $id)
-			->where('route_trip','=','ขากลับ')
+		$getRouteTurnOn3 = BusstopPhothong::where('busstop_line', $id)
+			->where(' busstop_trip','=','ขากลับ')
 			->get();		
 
 		$getRouteId3 = BusstopPhothong::where('busstop_line', $id)->get();
