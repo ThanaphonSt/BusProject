@@ -185,10 +185,7 @@ class BusController extends Controller {
 
 	public function currentbus($id)
 	{
-		$position = Position::find($id);
-		// dd($position);
 		return view('carpotongroute');
-		// ->with('position', $position);
 	}
 
 
