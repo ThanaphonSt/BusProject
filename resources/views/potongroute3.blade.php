@@ -210,7 +210,7 @@
          icon: {
                 path: google.maps.SymbolPath.CIRCLE,
                 scale: 10,
-                fillColor: 'green',
+                fillColor: 'blue',
                 fillOpacity: 1,
                 strokeColor: 'white',
                 strokeWeight: 3
