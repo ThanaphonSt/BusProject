@@ -33,7 +33,7 @@
           mapTypeId: 'roadmap'
         });
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = 'https://napoleon.workcreateinnovate.com/assets/marker-25c06ec94c2d53d851dfc79f313fde82.png';
+        var icons = 'http://wfarm4.dataknet.com/static/resources/icons/set4/64b6bbca2e8.png';
         @foreach($recommend as $recommend)
         var marker{{$recommend->attractions_id}} = new google.maps.Marker({
           place_id: {{$recommend->attractions_id}},
