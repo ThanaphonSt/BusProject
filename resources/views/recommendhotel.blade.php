@@ -33,7 +33,7 @@
           mapTypeId: 'roadmap'
         });
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = 'http://www.onlinevacationcenter.com/images/hotel_icon.png';
+        var icons = 'https://bulgaria.directbooking.ro/img/hotel-icon.gif';
         @foreach($recommendHotel as $recommendHotels)
         var marker{{$recommendHotels->id}} = new google.maps.Marker({
           place_id: {{$recommendHotels->id}},

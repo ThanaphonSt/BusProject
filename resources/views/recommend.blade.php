@@ -33,7 +33,7 @@
           mapTypeId: 'roadmap'
         });
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = 'http://wfarm4.dataknet.com/static/resources/icons/set4/64b6bbca2e8.png';
+        var icons = 'https://images.r.cruisecritic.com/misc/cruiselineStar20121001.png';
         @foreach($recommend as $recommend)
         var marker{{$recommend->attractions_id}} = new google.maps.Marker({
           place_id: {{$recommend->attractions_id}},

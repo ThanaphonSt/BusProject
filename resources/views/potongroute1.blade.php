@@ -71,8 +71,6 @@
                 mapTypeId: 'roadmap'
             });
         var infoWindow = new google.maps.InfoWindow({map: map});
-
-
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -90,7 +88,7 @@
 
           handleLocationError(false, infoWindow, map.getCenter());
         }               
-        var icons = 'http://wfarm4.dataknet.com/static/resources/icons/set4/64b6bbca2e8.png';
+        var icons = 'https://images.r.cruisecritic.com/misc/cruiselineStar20121001.png';
         @foreach($recommend as $recommend)
         var markers{{$recommend->attractions_id}} = new google.maps.Marker({
           place_id: {{$recommend->attractions_id}},
