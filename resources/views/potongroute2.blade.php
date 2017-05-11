@@ -157,7 +157,7 @@
       var no2 = [];
 
       function deleteMarkers() {
-        $.ajax({url: "http://128.199.195.185/api/v2/givepos", success: function(result){
+        $.ajax({url: "http://128.199.195.185/api/v2/givepos2", success: function(result){
             $.each(result, function(index, result) {
               // console.log(result);
               no1.push({lat: Number(result.lat), lng: Number(result.lon)});

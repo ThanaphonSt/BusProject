@@ -120,7 +120,7 @@
           icon: {
                 path: google.maps.SymbolPath.CIRCLE,
                 scale: 10,
-                fillColor: 'green',
+                fillColor: 'blue',
                 fillOpacity: 1,
                 strokeColor: 'white',
                 strokeWeight: 3
@@ -157,7 +157,7 @@
       var no2 = [];
 
       function deleteMarkers() {
-        $.ajax({url: "http://128.199.195.185/api/v2/givepos", success: function(result){
+        $.ajax({url: "http://128.199.195.185/api/v2/givepos3", success: function(result){
             $.each(result, function(index, result) {
               // console.log(result);
               no1.push({lat: Number(result.lat), lng: Number(result.lon)});
