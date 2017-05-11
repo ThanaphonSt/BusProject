@@ -60,8 +60,10 @@
         </div>
 
     <script>
+    var markers = [];
+    var map;
             function initMap(){
-                var map = new google.maps.Map(document.getElementById('map'), {
+                    map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 14,
                     center: {lat: 7.883135, lng: 98.387156},
                     mapTypeId: 'roadmap'
@@ -109,7 +111,6 @@
         busPath2go.setMap(map);
         busPath2back.setMap(map);
         }
-        var markers = [];
 
               // Adds a marker to the map and push to the array.
       function addMarker(location) {
