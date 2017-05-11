@@ -61,14 +61,14 @@
 
     <script>
     var markers = [];
-    var map;
+    var map2;
             function initMap(){
-                    map = new google.maps.Map(document.getElementById('map'), {
+                    map2 = new google.maps.Map(document.getElementById('map'), {
                     zoom: 14,
                     center: {lat: 7.883135, lng: 98.387156},
                     mapTypeId: 'roadmap'
                 });
-        var infoWindow = new google.maps.InfoWindow({map: map});
+        var infoWindow = new google.maps.InfoWindow({map: map2});
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -78,39 +78,39 @@
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('คุณอยู่ตรงนี้');
-            map.setCenter(pos);
+            map2.setCenter(pos);
           }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
+            handleLocationError(true, infoWindow, map2.getCenter());
           });
         } else {
 
-          handleLocationError(false, infoWindow, map.getCenter());
+          handleLocationError(false, infoWindow, map2.getCenter());
         }                     
         var icons = 'https://images.r.cruisecritic.com/misc/cruiselineStar20121001.png';
         @foreach($recommend as $recommend)
         var markers{{$recommend->attractions_id}} = new google.maps.Marker({
           place_id: {{$recommend->attractions_id}},
           position: {lat: {{$recommend->attractions_latitude}}, lng: {{$recommend->attractions_longitude}}},
-          map: map,
+          map: map2,
           icon: icons
         });
         var info{{$recommend->attractions_id}} = new google.maps.InfoWindow({
           content: '{{$recommend->attractions_name}}'
         });
         markers{{$recommend->attractions_id}}.addListener('click', function() {
-        info{{$recommend->attractions_id}}.open(map, markers{{$recommend->attractions_id}});
+        info{{$recommend->attractions_id}}.open(map2, markers{{$recommend->attractions_id}});
         });
         @endforeach
             @foreach($getRouteId2 as $key=>$getRoudeIds)
             var marker{{$getRoudeIds->busstop_id}} = new google.maps.Marker({
                 position: {lat: {{$getRoudeIds->busstop_latitude}}, lng: {{$getRoudeIds->busstop_longitude}}},
-              map: map
+              map: map2
             });
             var infowindow{{$getRoudeIds->busstop_id}} = new google.maps.InfoWindow({
               content: '{{$key+1}}. {{$getRoudeIds->busstop_name}}'
             });
             marker{{$getRoudeIds->busstop_id}}.addListener('click', function() {
-            infowindow{{$getRoudeIds->busstop_id}}.open(map, marker{{$getRoudeIds->busstop_id}});
+            infowindow{{$getRoudeIds->busstop_id}}.open(map2, marker{{$getRoudeIds->busstop_id}});
             });
             @endforeach
             
@@ -140,8 +140,13 @@
           strokeOpacity: 1.0,
           strokeWeight: 2
         });
-        busPath2go.setMap(map);
-        busPath2back.setMap(map);
+        busPath2go.setMap(map2);
+        busPath2back.setMap(map2);
+
+        map2.addListener('click', function(event) {
+          addMarker(event.latLng);
+        });
+
         }
 
               // Adds a marker to the map and push to the array.
@@ -157,7 +162,7 @@
                 strokeColor: 'white',
                 strokeWeight: 3
             },
-          map: map
+          map: map2
         });
         markers.push(marker);
       }
@@ -176,7 +181,7 @@
 
       // Shows any markers currently in the array.
       function showMarkers() {
-        setMapOnAll(map);
+        setMapOnAll(map2);
 
       setInterval(deleteMarkers, 5000);
       }
@@ -187,6 +192,7 @@
       // var results;
       var no1 = [];
       var no2 = [];
+      var markerPic;
 
       function deleteMarkers() {
         $.ajax({url: "http://128.199.195.185/api/v2/givepos2", success: function(result){
@@ -205,7 +211,7 @@
         // addMarker({lat: 7.8936129, lng: 98.3531696});
         for (var i in no1) {
           // addMarker(no1[i]);
-         var marker = new google.maps.Marker({
+         markerPic = new google.maps.Marker({
          position: new google.maps.LatLng(no1[i].lat, no1[i].lng),
          icon: {
                 path: google.maps.SymbolPath.CIRCLE,
@@ -215,15 +221,16 @@
                 strokeColor: 'white',
                 strokeWeight: 3
             },
-         map: map
+         map: map2
     });
+    markers.push(markerPic);
 
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-         return function() {
-             infowindow.setContent(locations[i][0]);
-             infowindow.open(map, marker);
-         }
-    })(marker, i));
+    // google.maps.event.addListener(markerPic, 'click', (function(markerPic, i) {
+    //      return function() {
+    //          infowindow.setContent(locations[i][0]);
+    //          infowindow.open(map2, markerPic);
+    //      }
+    // })(markerPic, i));
         }
 
         console.log(no1[1]);

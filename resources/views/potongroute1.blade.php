@@ -206,7 +206,7 @@
         // addMarker({lat: 7.8936129, lng: 98.3531696});
         for (var i in no1) {
           // addMarker(no1[i]);
-         var marker = new google.maps.Marker({
+         var markerPic = new google.maps.Marker({
          position: new google.maps.LatLng(no1[i].lat, no1[i].lng),
          icon: {
                 path: google.maps.SymbolPath.CIRCLE,
@@ -218,13 +218,14 @@
             },
          map: map
     });
+    markers.push(markerPic);
 
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    google.maps.event.addListener(markerPic, 'click', (function(markerPic, i) {
          return function() {
              infowindow.setContent(locations[i][0]);
-             infowindow.open(map, marker);
+             infowindow.open(map, markerPic);
          }
-    })(marker, i));
+    })(markerPic, i));
         }
 
         console.log(no1[1]);
