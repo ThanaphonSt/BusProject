@@ -36,7 +36,7 @@
           mapTypeId: 'roadmap'
         });
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = 'https://www.heartofbiking.org.nz/assets/Uploads/HOB-Icon-Food-25px.png';
+        var icons = 'http://new.everytrail.com/images/poicon_restaurant.png';
         @foreach($recommendRestaurant as $restaurant)
         var marker{{$restaurant->restaurant_id}} = new google.maps.Marker({
           place_id: {{$restaurant->restaurant_id}},

@@ -33,7 +33,7 @@
           mapTypeId: 'roadmap'
         });
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = 'https://www.csmd.edu/Assets/uploads/www.csmd.edu/import/csmd.vpmdev.com/dress/global/home-icon.png';
+        var icons = 'https://bulgaria.directbooking.ro/img/hotel-icon.gif';
         @foreach($recommendHotel as $recommendHotels)
         var marker{{$recommendHotels->id}} = new google.maps.Marker({
           place_id: {{$recommendHotels->id}},
