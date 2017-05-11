@@ -68,7 +68,39 @@
                     center: {lat: 7.883135, lng: 98.387156},
                     mapTypeId: 'roadmap'
                 });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
 
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('คุณอยู่ตรงนี้');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+
+          handleLocationError(false, infoWindow, map.getCenter());
+        }             
+        var icons = 'http://wfarm4.dataknet.com/static/resources/icons/set4/64b6bbca2e8.png';
+        @foreach($recommend as $recommend)
+        var markers{{$recommend->attractions_id}} = new google.maps.Marker({
+          place_id: {{$recommend->attractions_id}},
+          position: {lat: {{$recommend->attractions_latitude}}, lng: {{$recommend->attractions_longitude}}},
+          map: map,
+          icon: icons
+        });
+        var info{{$recommend->attractions_id}} = new google.maps.InfoWindow({
+          content: '{{$recommend->attractions_name}}'
+        });
+        markers{{$recommend->attractions_id}}.addListener('click', function() {
+        info{{$recommend->attractions_id}}.open(map, markers{{$recommend->attractions_id}});
+        });
+        @endforeach
             @foreach($getRouteId3 as $key=>$getRoudeIds)
             var marker{{$getRoudeIds->busstop_id}} = new google.maps.Marker({
                 position: {lat: {{$getRoudeIds->busstop_latitude}}, lng: {{$getRoudeIds->busstop_longitude}}},
