@@ -96,12 +96,15 @@ class BusController extends Controller {
 			->where('road_trip','=','ขากลับ')
 			->get();		
 
+		$recommend = Attractions::get();
+
 		return view('potongroute1')
 			->with('getRouteGoOn', $getRouteGoOn)
 			->with('getRouteTurnOn', $getRouteTurnOn)
 			->with('getRouteId', $getRouteId)
 			->with('getRoadGo', $getRoadGo)
-			->with('getRoadBack', $getRoadBack);
+			->with('getRoadBack', $getRoadBack)
+			->with('recommend', $recommend);
 	}
 
 	public function map2($id)
@@ -124,12 +127,15 @@ class BusController extends Controller {
 			->where('road_trip','=','ขากลับ')
 			->get();		
 
+		$recommend = Attractions::get();
+
 		return view('potongroute2')
 			->with('getRouteGoOn2', $getRouteGoOn2)
 			->with('getRouteTurnOn2', $getRouteTurnOn2)
 			->with('getRouteId2', $getRouteId2)
 			->with('getRoadGo2', $getRoadGo2)
-			->with('getRoadBack2', $getRoadBack2);
+			->with('getRoadBack2', $getRoadBack2)
+			->with('recommend', $recommend);
 	}
 
 	public function map3($id)
@@ -152,12 +158,15 @@ class BusController extends Controller {
 			->where('road_trip','=','ขากลับ')
 			->get();		
 
+		$recommend = Attractions::get();
+
 		return view('potongroute3')
 			->with('getRouteGoOn3', $getRouteGoOn3)
 			->with('getRouteTurnOn3', $getRouteTurnOn3)
 			->with('getRouteId3', $getRouteId3)
 			->with('getRoadGo3', $getRoadGo3)
-			->with('getRoadBack3', $getRoadBack3);
+			->with('getRoadBack3', $getRoadBack3)
+			->with('recommend', $recommend);
 	}
 
 	public function recommendShopping()
