@@ -157,7 +157,7 @@
           icon: {
                 path: google.maps.SymbolPath.CIRCLE,
                 scale: 10,
-                fillColor: 'green',
+                fillColor: '#D1BB00',
                 fillOpacity: 1,
                 strokeColor: 'white',
                 strokeWeight: 3
@@ -216,7 +216,7 @@
          icon: {
                 path: google.maps.SymbolPath.CIRCLE,
                 scale: 10,
-                fillColor: 'green',
+                fillColor: '#D1BB00',
                 fillOpacity: 1,
                 strokeColor: 'white',
                 strokeWeight: 3
