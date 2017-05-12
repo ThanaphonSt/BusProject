@@ -181,7 +181,7 @@
                                 <ul>
                                     <li><a href="{{url('/routeofpotong')}}" class="waves-effect truncate">เส้นทางเดินรถโพถ้อง</a></li>
                                     <li><a href="{{url('/recommend')}}" class="waves-effect truncate">สถานที่แนะนำ</a></li>
-                                    <li><a href="{{url('/currentbus/1')}}" class="waves-effect truncate">ตำแหน่งรถปัจจุบัน</a></li>
+                                    <!--<li><a href="{{url('/currentbus/1')}}" class="waves-effect truncate">ตำแหน่งรถปัจจุบัน</a></li>-->
                                 </ul>
                             </div>
                         </li>
