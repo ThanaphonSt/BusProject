@@ -26,6 +26,25 @@
                     center: {lat: 7.883135, lng: 98.387156},
                     mapTypeId: 'roadmap'
                 });
+                        var infoWindow = new google.maps.InfoWindow({map: map});
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude
+                    };
+
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent('คุณอยู่ตรงนี้');
+                    map.setCenter(pos);
+                  }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                  });
+                } else {
+
+                  handleLocationError(false, infoWindow, map.getCenter());
+                }               
+
                   @foreach($airportbusroute as $airportbusroutes)
                   var marker{{$airportbusroutes->busstop_id}} = new google.maps.Marker({
                     position: {lat: {{$airportbusroutes->busstop_latitude}}, lng: {{$airportbusroutes->busstop_longitude}}},
